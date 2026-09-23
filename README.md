@@ -11,7 +11,8 @@ Third-person combat animations and the lobby skill-preview stage for [ONLY ONE S
 | `GameIntegration/` | `SkillPreviewPlayer` / config Lua and integration notes |
 | `_animation_tools/` | Blender scripts for building and rendering clips |
 
-- Status and the open blocker: [HANDOFF.md](HANDOFF.md)
+- How the animations were put into OVERDARE (1P Lua clips, 3P ODA 28-bone rig): [docs/ANIMATION_PIPELINE.md](docs/ANIMATION_PIPELINE.md)
+- Full work log, asset ids, and the final state (2026-09-18 22:50): [HANDOFF.md](HANDOFF.md)
 - Skill list: [Combat_Skill_List.md](Combat_Skill_List.md)
 
 Blend sources, packaged zips, preview videos, frame renders, and the `.ovdrjm` snapshots are attached to the
