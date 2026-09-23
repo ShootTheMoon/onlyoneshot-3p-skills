@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"instances\": {\n    \"status\": \"ok\",\n    \"data\": {\n      \"success\": true,\n      \"clientId\": \"59891b96-4115-0867-2799-48b45c8ac2d3\",\n      \"world\": \"client\",\n      \"worldNote\": \"Read from the client world the input tools drive. Server-side rules and collision are judged on the authority world, which can hold a different value for the same instance while replication is in flight.\",\n      \"searched\": \"wholeWorld\",\n      \"namePattern\": \"preview_rig\",\n      \"matchCount\": 0,\n      \"instances\": []\n    }\n  },\n  \"outcome\": \"ok\"\n}"
+    }
+  ]
+}

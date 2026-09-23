@@ -1,0 +1,5 @@
+[{"name":"overdare_pie_status","arguments":{}},
+ {"name":"overdare_find","arguments":{"query":"w3p"},"output":"C:/Users/29/Desktop/3y/GameIntegration/lo1.json"},
+ {"name":"overdare_find","arguments":{"query":"SkillPreview"},"output":"C:/Users/29/Desktop/3y/GameIntegration/lo2.json"},
+ {"name":"overdare_find","arguments":{"query":"AnimProbe"},"output":"C:/Users/29/Desktop/3y/GameIntegration/lo3.json"},
+ {"name":"overdare_find","arguments":{"query":"bow3p"},"output":"C:/Users/29/Desktop/3y/GameIntegration/lo4.json"}]

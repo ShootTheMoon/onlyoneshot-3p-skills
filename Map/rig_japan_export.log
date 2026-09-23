@@ -1,0 +1,19 @@
+00:01.110  blend            | Read blend: "C:\Users\29\Desktop\3y\Wakizashi_3P.blend"
+C:\Users\29\Desktop\3y\GameIntegration\blender\export_bundle.py:91: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\Users\29\Desktop\3y\GameIntegration\blender\export_bundle.py:107: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+Info: Baking map saved to internal image, save it externally or pack it
+
+FBX export starting... 'C:/Users/29/Desktop/3y/OVDR_Import/rig_japan_full.fbx'
+(bpy.data.armatures['Armature'], 'POSE')
+export finished in 0.6006 sec.
+BUNDLE_JSON {"file": "C:/Users/29/Desktop/3y/OVDR_Import/rig_japan_full.fbx", "bytes": 3633212, "mesh": "Wakizashi3P", "texture": "C:/Users/29/Desktop/3y/OVDR_Import/rig_japan_full_BaseColor.png", "actions_kept": ["Wakizashi_3P_Attack1", "Wakizashi_3P_Attack2", "Wakizashi_3P_Attack3", "Wakizashi_3P_BlockHold", "Wakizashi_3P_BlockIn", "Wakizashi_3P_BlockOut", "Wakizashi_3P_Draw", "Wakizashi_3P_Idle", "Wakizashi_3P_KunaiThrow", "Wakizashi_3P_Ryunochi", "Wakizashi_3P_Teleport"], "actions_dropped": 64, "weapons": [{"as": "Wakizashi_R", "bone": "RightHand", "verts": 6980}, {"as": "Wakizashi_L", "bone": "LeftHand", "verts": 6980}, {"as": "Kunai", "bone": "RightHand", "verts": 1023}]}
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

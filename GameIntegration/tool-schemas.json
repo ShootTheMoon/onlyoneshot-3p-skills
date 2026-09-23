@@ -1,0 +1,1809 @@
+{
+  "tools": [
+    {
+      "name": "overdare_recipe",
+      "description": "Read a battle-tested OVERDARE build recipe (adapted from the built-in agent's skills). Omit `topic` to list all recipes; pass one to read it. Consult BEFORE building UI, combat, or publishing. Topics: overview, luau-gotchas, ui-recipes, ui-templates, combat-tpa, actionsequence, publish, blender-bridge.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "enum": [
+              "overview",
+              "luau-gotchas",
+              "ui-recipes",
+              "ui-templates",
+              "combat-tpa",
+              "actionsequence",
+              "publish",
+              "blender-bridge"
+            ],
+            "description": "Recipe topic; omit to list all."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_browse",
+      "description": "Browse the live OVERDARE DataModel tree (Workspace, Players, ReplicatedStorage, ServerScriptService, StarterGui, etc). Returns nodes as { guid, name, class, children }. ALWAYS call this first — every other tool targets nodes by their `guid`.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_script_add",
+      "description": "Create a Luau script under a parent instance. Use TABS for indentation. Good parents: ServerScriptService (Script), StarterPlayer.StarterPlayerScripts (LocalScript), ReplicatedStorage (ModuleScript). Edits the project file and reloads, like overdare_script_edit — STOP any playtest first. Check the result with overdare_validate_lua.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "class": {
+            "type": "string",
+            "enum": [
+              "Script",
+              "LocalScript",
+              "ModuleScript"
+            ],
+            "description": "Script kind: Script=server, LocalScript=client, ModuleScript=shared library."
+          },
+          "parent": {
+            "type": "string",
+            "description": "Parent GUID or dotted path (from overdare_find or overdare_browse)."
+          },
+          "name": {
+            "type": "string",
+            "description": "Script name."
+          },
+          "source": {
+            "type": "string",
+            "description": "Luau source code (tabs for indentation)."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Defaults to enabled."
+          }
+        },
+        "required": [
+          "class",
+          "parent",
+          "name",
+          "source"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_instance_delete",
+      "description": "Delete one or more instances by GUID (and their descendants). Irreversible — confirm intent before calling.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "guids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "GUIDs to delete (from overdare_browse)."
+          }
+        },
+        "required": [
+          "guids"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_instance_create",
+      "description": "Create instances under one parent in the live editor. Create one level at a time and use the returned GUIDs as the next level's parent. Classes this build does not have are not an error — they simply come back with a null guid, so check the result rather than assuming success.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "parentGuid": {
+            "type": "string",
+            "description": "Parent instance GUID (from overdare_browse or overdare_find)."
+          },
+          "instances": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "class": {
+                  "type": "string",
+                  "description": "InstanceType, e.g. \"Frame\", \"TextLabel\", \"ProgressBar\", \"UIStroke\"."
+                },
+                "name": {
+                  "type": "string"
+                },
+                "props": {
+                  "type": "object",
+                  "additionalProperties": {},
+                  "description": "Properties, written flat. Composite values accept an array short form: Position/Size [xScale,xOffset,yScale,yOffset], *Color3 [r,g,b] 0-255, AnchorPoint [x,y], *CornerRadius/Padding [scale,offset], SliceCenter [minX,minY,maxX,maxY], FontFace {Family,Style,Weight}. Fully tagged ObjectType objects pass through as given."
+                }
+              },
+              "required": [
+                "class",
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 100
+          }
+        },
+        "required": [
+          "parentGuid",
+          "instances"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_instance_update",
+      "description": "Change properties on existing instances in the live editor. Read the returned `message`: an unknown property name does not fail the call, it comes back as a [WARNING] there while everything else is applied.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "instances": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "guid": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "Only when renaming."
+                },
+                "props": {
+                  "type": "object",
+                  "additionalProperties": {},
+                  "description": "Properties, written flat. Composite values accept an array short form: Position/Size [xScale,xOffset,yScale,yOffset], *Color3 [r,g,b] 0-255, AnchorPoint [x,y], *CornerRadius/Padding [scale,offset], SliceCenter [minX,minY,maxX,maxY], FontFace {Family,Style,Weight}. Fully tagged ObjectType objects pass through as given."
+                }
+              },
+              "required": [
+                "guid"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 100
+          }
+        },
+        "required": [
+          "instances"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_save",
+      "description": "Save the project to disk (.ovdrjm/.umap). Call after meaningful changes.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_apply",
+      "description": "Tell Studio to apply/reload pending level changes. Used after low-level edits; safe to call to refresh state.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_publish",
+      "description": "Publish the world to the OVERDARE Hub.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_play",
+      "description": "Start a playtest of the current level. Optionally simulate multiple players.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "numberOfPlayer": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "description": "Number of players to simulate (default 1)."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_stop",
+      "description": "Stop the running playtest.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_screenshot",
+      "description": "Capture the live Studio viewport / running game and return the image so you can visually verify the scene. Great for 'visual-first' iteration: change something, then look. On-screen UI is included unless you turn it off. `locate` projects world positions or instance names into the same 0..1 viewport coordinates overdare_input_inject clicks in, so you can find a thing and then click it.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "includeGui": {
+            "type": "boolean",
+            "description": "Include on-screen UI. Defaults to true; false renders the world alone."
+          },
+          "locate": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "description": "Instance name or dotted path."
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "z": {
+                      "type": "number"
+                    },
+                    "label": {
+                      "type": "string",
+                      "description": "Echoed back on the result."
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y",
+                    "z"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "maxItems": 32,
+            "description": "World positions or instances to project into viewport coordinates."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_pie_status",
+      "description": "Report whether a playtest is running and which clients can take injected input. Call this before observing or injecting — every tool below fails without a live client.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_character_read",
+      "description": "Read the playing character's CFrame, speed, facing, and what it is standing on.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_ui_browse",
+      "description": "List the running client's UI as flat elements: dotted path, class, text, normalized rect and centre, visibility, and whether each is on screen. This is the live tree, so it reflects what scripts have done to it — unlike overdare_read_instance, which reads the saved project. Narrow with `paths` on a large HUD.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "paths": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Element names, dotted paths, or on-screen labels. A trailing \".*\" takes the subtree."
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Keep only these fields; `path` and `class` always come back."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_observe",
+      "description": "Read character, UI, and live instance state in one game-thread observation. Ask for at least one section. Use this rather than a screenshot for values — colours, text, positions, visibility — and a screenshot for how they actually look.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "character": {
+            "type": "boolean",
+            "description": "Include the character's pose, velocity, facing, and standingOn."
+          },
+          "ui": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "paths": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            ],
+            "description": "true for everything, or the same narrowing overdare_ui_browse takes."
+          },
+          "instances": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "maxItems": 64,
+                "description": "Names or dotted paths, read independently."
+              },
+              {
+                "type": "object",
+                "additionalProperties": {},
+                "description": "{ targets } to name them, or { namePattern, class, under, maxDepth } to search."
+              }
+            ],
+            "description": "Live instance state as scripts have left it, not as it was saved."
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Per-instance fields to keep."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_input_inject",
+      "description": "Drive the playtest with an ordered batch of key, pointer, look, scroll, and wait events — up to 64 events over 60 seconds. A pointerButton takes either a `target` (UI name, path, or visible label, resolved against the live layout) or a normalized `position`, never both. Real input in the viewport cancels the batch. Confirm the effect with overdare_observe; the call itself only reports that the events were delivered. Note that only part of the viewport can take a pointer event when the Studio window hangs off screen — overdare_ui_browse reports the reachable region.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": {}
+            },
+            "minItems": 1,
+            "maxItems": 64,
+            "description": "Ordered events. {type:\"key\", key:<KeyCode>, action:\"down\"|\"up\"|\"press\", durationMs?}, {type:\"pointerMove\", position?:{x,y}, target?}, {type:\"pointerButton\", button, action, target?|position?}, {type:\"look\", yawDegrees?, pitchDegrees?, timeoutMs?}, {type:\"mouseDelta\", delta:{x,y}}, {type:\"scroll\", delta}, {type:\"wait\", durationMs, until?}."
+          },
+          "pieSessionId": {
+            "type": "string",
+            "description": "Defaults to the running session."
+          },
+          "clientId": {
+            "type": "string",
+            "description": "Defaults to the first injectable client."
+          }
+        },
+        "required": [
+          "events"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_assets",
+      "description": "List the curated OVERDARE Asset Drawer catalog (official UI screens + a PvP combat template) so you can pick a KNOWN-GOOD id to import with overdare_asset_import. Guessing an id is dangerous (a bad id hangs Studio). No Studio call; safe anytime.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "ui",
+              "combat",
+              "world"
+            ],
+            "description": "Filter by category."
+          },
+          "query": {
+            "type": "string",
+            "description": "Case-insensitive substring match on name/description."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_asset_import",
+      "description": "Import an Asset Drawer model into the level by id (a full UI screen, the combat template, etc.). It lands under Workspace — relocate with overdare_move_instance (UI -> StarterGui). DANGER: a wrong id permanently HANGS Studio. Pick ids from overdare_assets, STOP the playtest, then set confirmStopped=true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "string",
+            "description": "Asset Drawer id \"ovdrassetid://NUMBER\" (use overdare_assets to pick)."
+          },
+          "assetName": {
+            "type": "string",
+            "description": "Display name; defaults from the catalog when the id is known."
+          },
+          "confirmStopped": {
+            "type": "boolean",
+            "default": false,
+            "description": "Must be true: confirms the playtest is STOPPED. Importing during play (or a bad id) hangs Studio."
+          }
+        },
+        "required": [
+          "assetId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_image_import",
+      "description": "Import a local image file (PNG/JPG) into the asset manager and return the created asset id — use it as Image/Decal content (e.g. on an ImageLabel or a Texture). STOP the playtest first. Not subject to the bad-id hang (no id input).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "Absolute path to a local image file (PNG/JPG)."
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_mesh_prepare",
+      "description": "Make any 3D file OVERDARE-import-ready via headless Blender: joins meshes, decimates to the per-mesh triangle budget (OVERDARE limit = 30,000), and downscales textures (OVERDARE recommends 512; large 4K textures OOM the importer). Accepts .fbx/.obj/.glb/.gltf/.blend and writes <name>_overdare.fbx (textures embedded) next to the input (or in outDir). The final Import into Studio is still a manual GUI step (Home > Import). Requires Blender installed — set OVERDARE_BLENDER to override the path.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "Absolute path to the source 3D file (.fbx/.obj/.glb/.gltf/.blend)."
+          },
+          "maxTris": {
+            "type": "integer",
+            "default": 30000,
+            "description": "Triangle budget per mesh (OVERDARE limit = 30000)."
+          },
+          "textureSize": {
+            "type": "integer",
+            "default": 1024,
+            "description": "Max texture dimension in px (OVERDARE recommends 512; 1024 balances detail/size)."
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "decimate",
+              "keep"
+            ],
+            "default": "decimate",
+            "description": "'decimate' reduces an over-budget mesh to fit; 'keep' only fits textures."
+          },
+          "outDir": {
+            "type": "string",
+            "description": "Output directory (default: same folder as the input file)."
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_mesh_bulk_import",
+      "description": "Get many prepared meshes into Studio in ONE trip through the UI. Packs up to 200 _overdare.fbx files into a single bundle, drives Bulk Import once, then reads the new asset ids back out of UGCLocalAssetTable.json and pairs each mesh with its texture. Returns [{asset, meshId, textureId}] ready for overdare_create_instances. Importing one file at a time costs a dialog per asset and each one is a chance for Studio to be busy or for another window to steal focus. STOP any playtest first.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 200,
+            "description": "Absolute paths to prepared *_overdare.fbx files (max 200 — the Bulk Import limit)."
+          },
+          "bundleName": {
+            "type": "string",
+            "description": "Name for the bundle file; becomes the asset name prefix. Default: bundle_<timestamp>."
+          },
+          "outDir": {
+            "type": "string",
+            "description": "Where to write the bundle (default: folder of the first input)."
+          },
+          "waitSec": {
+            "type": "integer",
+            "default": 300,
+            "description": "How long to wait for Studio to cook and register the assets."
+          }
+        },
+        "required": [
+          "files"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_set_project",
+      "description": "Point the .ovdrjm file-edit tools at a project, or re-detect the loaded one. By default the server auto-follows whichever project is open in Studio (via its screenshot path); call this after switching projects in Studio, or to force a specific directory. Pass no dir to clear the cache and re-detect the loaded project.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "dir": {
+            "type": "string",
+            "description": "Absolute path to the project directory (the folder containing the .ovdrjm). Omit to clear the cached target and re-detect the currently loaded project."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_create_part",
+      "description": "Create a persistent Part in the editor (not runtime) by editing the .ovdrjm and reloading. Use for real, saveable map geometry. STOP any playtest first. Position/size/color scale to the world (character height ~160; baseplate is huge).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "parent": {
+            "type": "string",
+            "default": "Workspace",
+            "description": "Parent GUID or dotted path (default Workspace)."
+          },
+          "name": {
+            "type": "string",
+            "description": "Part name."
+          },
+          "position": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3,
+            "description": "[X,Y,Z] world position."
+          },
+          "size": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3,
+            "default": [
+              300,
+              300,
+              300
+            ],
+            "description": "[X,Y,Z] size."
+          },
+          "color": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3,
+            "default": [
+              163,
+              162,
+              165
+            ],
+            "description": "[R,G,B] 0-255."
+          },
+          "anchored": {
+            "type": "boolean",
+            "default": true
+          },
+          "material": {
+            "type": "string",
+            "description": "e.g. Plastic, Metal, Glass, Neon, Wood, Marble, Concrete."
+          },
+          "shape": {
+            "type": "string",
+            "enum": [
+              "Block",
+              "Ball",
+              "Cylinder"
+            ]
+          },
+          "transparency": {
+            "type": "number",
+            "description": "0 (opaque) - 1 (invisible)."
+          },
+          "canCollide": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "position"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_create_instance",
+      "description": "Create a persistent instance of any class in the editor by editing the .ovdrjm (e.g. Folder, Model, MeshPart, Part). STOP any playtest first. `props` accepts position/size/color/anchored/meshId, plus `raw` for verbatim fields.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "className": {
+            "type": "string",
+            "description": "e.g. \"Folder\", \"Model\", \"Part\", \"MeshPart\"."
+          },
+          "parent": {
+            "type": "string",
+            "default": "Workspace",
+            "description": "Parent GUID or dotted path."
+          },
+          "name": {
+            "type": "string"
+          },
+          "props": {
+            "type": "object",
+            "properties": {
+              "position": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[X,Y,Z] world position."
+              },
+              "orientation": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[X,Y,Z] degrees."
+              },
+              "size": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[X,Y,Z] size."
+              },
+              "color": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[R,G,B] 0-255."
+              },
+              "anchored": {
+                "type": "boolean"
+              },
+              "canCollide": {
+                "type": "boolean"
+              },
+              "transparency": {
+                "type": "number",
+                "description": "0 (opaque) - 1 (invisible)."
+              },
+              "mobility": {
+                "type": "string",
+                "enum": [
+                  "Movable",
+                  "Static"
+                ]
+              },
+              "meshId": {
+                "type": "string"
+              },
+              "shape": {
+                "type": "string",
+                "enum": [
+                  "Block",
+                  "Ball",
+                  "Cylinder"
+                ]
+              },
+              "material": {
+                "type": "string",
+                "description": "e.g. Plastic, Metal, Glass, Neon, Wood, Marble, Concrete, Brick."
+              },
+              "castShadow": {
+                "type": "boolean"
+              },
+              "canTouch": {
+                "type": "boolean"
+              },
+              "canQuery": {
+                "type": "boolean"
+              },
+              "canClimb": {
+                "type": "boolean"
+              },
+              "locked": {
+                "type": "boolean"
+              },
+              "collisionProfile": {
+                "type": "string"
+              },
+              "collisionGroup": {
+                "type": "string"
+              },
+              "materialVariant": {
+                "type": "string"
+              },
+              "raw": {
+                "type": "object",
+                "additionalProperties": {},
+                "description": "Verbatim ovdrjm fields (e.g. UDim2 Position/Size for UI, nested BrickColor)."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "className",
+          "name"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_delete_instance",
+      "description": "Permanently delete an instance by GUID by editing the .ovdrjm and reloading. STOP any playtest first. (For scripts, prefer overdare_rpc script.delete.)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "guid": {
+            "type": "string",
+            "description": "ActorGuid to delete (from overdare_browse)."
+          }
+        },
+        "required": [
+          "guid"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_update_instance",
+      "description": "Modify existing instances' properties (and/or rename) — edits the .ovdrjm and reloads. STOP any playtest first. Use after import/create to tweak material, color, size, transparency, etc. `props` is the same shape as overdare_create_instance. Pass `guids` instead of `guid` to apply the same props to many instances in ONE reload — far faster than one call per instance when restyling a whole set (e.g. recolouring every wall segment).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "guid": {
+            "type": "string",
+            "description": "ActorGuid to update (from overdare_browse)."
+          },
+          "guids": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "description": "ActorGuids to update with the same props, in a single edit (max 500)."
+          },
+          "props": {
+            "type": "object",
+            "properties": {
+              "position": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[X,Y,Z] world position."
+              },
+              "orientation": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[X,Y,Z] degrees."
+              },
+              "size": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[X,Y,Z] size."
+              },
+              "color": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[R,G,B] 0-255."
+              },
+              "anchored": {
+                "type": "boolean"
+              },
+              "canCollide": {
+                "type": "boolean"
+              },
+              "transparency": {
+                "type": "number",
+                "description": "0 (opaque) - 1 (invisible)."
+              },
+              "mobility": {
+                "type": "string",
+                "enum": [
+                  "Movable",
+                  "Static"
+                ]
+              },
+              "meshId": {
+                "type": "string"
+              },
+              "shape": {
+                "type": "string",
+                "enum": [
+                  "Block",
+                  "Ball",
+                  "Cylinder"
+                ]
+              },
+              "material": {
+                "type": "string",
+                "description": "e.g. Plastic, Metal, Glass, Neon, Wood, Marble, Concrete, Brick."
+              },
+              "castShadow": {
+                "type": "boolean"
+              },
+              "canTouch": {
+                "type": "boolean"
+              },
+              "canQuery": {
+                "type": "boolean"
+              },
+              "canClimb": {
+                "type": "boolean"
+              },
+              "locked": {
+                "type": "boolean"
+              },
+              "collisionProfile": {
+                "type": "string"
+              },
+              "collisionGroup": {
+                "type": "string"
+              },
+              "materialVariant": {
+                "type": "string"
+              },
+              "raw": {
+                "type": "object",
+                "additionalProperties": {},
+                "description": "Verbatim ovdrjm fields (e.g. UDim2 Position/Size for UI, nested BrickColor)."
+              }
+            },
+            "additionalProperties": false
+          },
+          "name": {
+            "type": "string",
+            "description": "New name (optional; only with a single `guid`)."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_camera",
+      "description": "Aim the editor viewport camera, so the next overdare_screenshot shows what you want. Editing Workspace.Camera does NOT move the viewport — this drives it for real, via the Studio's MUnrealEditorSubsystem over Remote Control.\nFour ways to use it: `focus` frames an instance or a whole Folder/Model (it measures the subtree's bounds and backs off to fit); `position` + `lookAt` points at a world point; `position` + `orientation` sets the angle by hand; no arguments at all just reads back where the camera is.\nAll coordinates are OVERDARE cm with Y up — the UE-native axis swap is handled for you.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "focus": {
+            "type": "string",
+            "description": "GUID or dotted path to frame. Measures the node's subtree bounds and places the camera to fit it — the easy way to look at a landmark."
+          },
+          "position": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3,
+            "description": "[X,Y,Z] camera position. Ignored when `focus` is given."
+          },
+          "lookAt": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3,
+            "description": "[X,Y,Z] world point to face; the orientation is computed for you."
+          },
+          "orientation": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3,
+            "description": "[pitch,yaw,roll] degrees. Negative pitch looks down. Overridden by `lookAt`."
+          },
+          "distance": {
+            "type": "number",
+            "description": "With `focus`: how far back to sit, in cm. Default fits the bounds."
+          },
+          "yaw": {
+            "type": "number",
+            "description": "With `focus`: compass angle to view from, degrees. Default 180 (looking +Z)."
+          },
+          "pitch": {
+            "type": "number",
+            "description": "With `focus`: downward tilt, degrees. Default -20."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_viewport",
+      "description": "Read or change how the editor viewport renders, which is what overdare_screenshot captures. `gameView` hides the editor-only overlay (grid, gizmo, billboards) for a clean shot; `invalidate` forces a redraw when a screenshot looks stale. Called with no arguments it just reports the current state.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "gameView": {
+            "type": "boolean",
+            "description": "true hides the editor overlay for clean screenshots; false restores it."
+          },
+          "invalidate": {
+            "type": "boolean",
+            "description": "Force the viewport to redraw."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_actors",
+      "description": "List the LIVE actors in the editor world with their Unreal object paths — the handles the selection and low-level Remote Control tools need. This is the engine's view, not the DataModel: use overdare_browse for the Luau tree and its GUIDs. Filter by substring and cap the count, since a built map runs to hundreds of actors.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "filter": {
+            "type": "string",
+            "description": "Case-insensitive substring of the actor path."
+          },
+          "limit": {
+            "type": "number",
+            "description": "Max paths to return (default 50)."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_selection",
+      "description": "Read or change the editor's actor selection — handy for showing the user what you are talking about, since selected actors are outlined in the viewport (and in a screenshot). Takes Unreal actor paths from overdare_actors, not DataModel GUIDs. With no arguments it reports the current selection.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "actors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Actor paths to select (replaces the selection unless `add` is true)."
+          },
+          "add": {
+            "type": "boolean",
+            "description": "Add to the selection instead of replacing it."
+          },
+          "clear": {
+            "type": "boolean",
+            "description": "Deselect everything."
+          },
+          "all": {
+            "type": "boolean",
+            "description": "Select every actor in the level."
+          },
+          "invert": {
+            "type": "boolean",
+            "description": "Invert the current selection."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_console",
+      "description": "Run an Unreal console command in Studio, or read a console variable. This is the widest lever the server has — the whole `r.*`, `show`, `stat` and `HighResShot` surface — so it is also the sharpest: commands are executed verbatim and some (quit, level travel) will disrupt the session. Prefer a dedicated tool when one exists.\nExamples: `r.ScreenPercentage 150` then a screenshot for a crisper shot; `stat fps` for an FPS overlay; `HighResShot 2` for a high-resolution capture.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "Console command, e.g. \"r.ScreenPercentage 150\"."
+          },
+          "cvar": {
+            "type": "string",
+            "description": "Console variable to read back, e.g. \"r.ScreenPercentage\"."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_engine_assets",
+      "description": "Query the engine's asset registry — what Unreal actually has loaded, as opposed to UGCLocalAssetTable.json (the project's own contentId registry, which only updates on save). Useful for confirming an import really landed: freshly imported meshes and textures appear under /Asset/TempImportedAssetDir. Pass `directory` to list, or `assetPath` to test one.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "directory": {
+            "type": "string",
+            "description": "Directory to list, e.g. \"/Asset/TempImportedAssetDir\". Default that path."
+          },
+          "recursive": {
+            "type": "boolean",
+            "description": "Recurse into subdirectories (default true)."
+          },
+          "assetPath": {
+            "type": "string",
+            "description": "Instead of listing, test whether this asset exists."
+          },
+          "limit": {
+            "type": "number",
+            "description": "Max entries to return (default 100)."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_move_instance",
+      "description": "Reparent an instance under a new parent — edits the .ovdrjm and reloads. STOP any playtest first. Essential after overdare_asset_import (imports land under Workspace; move UI to \"StarterGui\").",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "guid": {
+            "type": "string",
+            "description": "ActorGuid to move (from overdare_browse)."
+          },
+          "newParent": {
+            "type": "string",
+            "description": "New parent GUID or dotted path (e.g. \"StarterGui\")."
+          }
+        },
+        "required": [
+          "guid",
+          "newParent"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_create_instances",
+      "description": "Bulk-create multiple instances under one parent in a single edit (one reload). STOP any playtest first. Best for classes already present in the project (e.g. Part); for novel classes, import a template first. Max 50.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "parent": {
+            "type": "string",
+            "default": "Workspace",
+            "description": "Parent GUID or dotted path."
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "className": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "props": {
+                  "type": "object",
+                  "properties": {
+                    "position": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "description": "[X,Y,Z] world position."
+                    },
+                    "orientation": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "description": "[X,Y,Z] degrees."
+                    },
+                    "size": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "description": "[X,Y,Z] size."
+                    },
+                    "color": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "description": "[R,G,B] 0-255."
+                    },
+                    "anchored": {
+                      "type": "boolean"
+                    },
+                    "canCollide": {
+                      "type": "boolean"
+                    },
+                    "transparency": {
+                      "type": "number",
+                      "description": "0 (opaque) - 1 (invisible)."
+                    },
+                    "mobility": {
+                      "type": "string",
+                      "enum": [
+                        "Movable",
+                        "Static"
+                      ]
+                    },
+                    "meshId": {
+                      "type": "string"
+                    },
+                    "shape": {
+                      "type": "string",
+                      "enum": [
+                        "Block",
+                        "Ball",
+                        "Cylinder"
+                      ]
+                    },
+                    "material": {
+                      "type": "string",
+                      "description": "e.g. Plastic, Metal, Glass, Neon, Wood, Marble, Concrete, Brick."
+                    },
+                    "castShadow": {
+                      "type": "boolean"
+                    },
+                    "canTouch": {
+                      "type": "boolean"
+                    },
+                    "canQuery": {
+                      "type": "boolean"
+                    },
+                    "canClimb": {
+                      "type": "boolean"
+                    },
+                    "locked": {
+                      "type": "boolean"
+                    },
+                    "collisionProfile": {
+                      "type": "string"
+                    },
+                    "collisionGroup": {
+                      "type": "string"
+                    },
+                    "materialVariant": {
+                      "type": "string"
+                    },
+                    "raw": {
+                      "type": "object",
+                      "additionalProperties": {},
+                      "description": "Verbatim ovdrjm fields (e.g. UDim2 Position/Size for UI, nested BrickColor)."
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "className",
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 50,
+            "description": "Instances to create."
+          },
+          "itemsFile": {
+            "type": "string",
+            "description": "Path to a JSON file holding the same array as `items` (max 200). Use this when a generator script produced the layout — it avoids pasting a large array through the tool call."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_read_instance",
+      "description": "Read an instance's properties from the saved project (.ovdrjm) — fills the gap left by the absent instance.read RPC. Returns the node's fields (Material, Size, CFrame, Transparency, …) plus a summary of its children. Pair with overdare_update_instance to change them. (Reads the saved file — overdare_save first if you have unsaved edits.)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "type": "string",
+            "description": "ActorGuid or dotted path (e.g. \"Workspace.Baseplate\")."
+          }
+        },
+        "required": [
+          "ref"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_script_read",
+      "description": "Read an existing script's Luau source from the saved project (.ovdrjm) — fills the gap left by the absent script.read RPC. Use before overdare_script_edit to see what you're changing.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "type": "string",
+            "description": "ActorGuid or dotted path of a Script/LocalScript/ModuleScript."
+          }
+        },
+        "required": [
+          "ref"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_find",
+      "description": "Search the project tree by name substring and/or class, returning matching nodes with guid + dotted path. Far more practical than overdare_browse on large projects (e.g. after importing the TPA combat template).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Case-insensitive name substring."
+          },
+          "className": {
+            "type": "string",
+            "description": "Exact InstanceType, e.g. \"Part\", \"Script\", \"TextButton\"."
+          },
+          "limit": {
+            "type": "integer",
+            "default": 50
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_script_edit",
+      "description": "Replace an existing script's Luau source (and/or toggle Enabled) by editing the .ovdrjm and reloading — fills the gap left by the absent script.edit RPC. STOP any playtest first. Use TABS for indentation. (To create a NEW script use overdare_script_add.)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "guid": {
+            "type": "string",
+            "description": "ActorGuid of the script (from overdare_find/browse)."
+          },
+          "source": {
+            "type": "string",
+            "description": "New full Luau source (tabs for indentation)."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Enable/disable the script."
+          }
+        },
+        "required": [
+          "guid"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_validate_lua",
+      "description": "Type-check Luau with luau-lsp against the OVERDARE type definitions, either scripts already in the project (by GUID or dotted path) or files on disk. Instance property errors are the ones that matter — they catch calls against an API this build no longer has, which otherwise only surface as a runtime warning in the log. Lint noise like an unused local is not worth acting on.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Script GUIDs or dotted paths in the project. Their Source is checked."
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Absolute paths to .lua files."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_duplicate_instance",
+      "description": "Duplicate an existing instance (and its whole subtree) with fresh GUIDs by editing the .ovdrjm and reloading. STOP any playtest first. Great for replicating a built platform or decorated model. Internal weld/ref links aren't remapped (fine for parts/models/scripts/UI).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "guid": {
+            "type": "string",
+            "description": "ActorGuid to duplicate (from overdare_find/browse)."
+          },
+          "parent": {
+            "type": "string",
+            "description": "New parent GUID/path (default: same parent as the original)."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name for the copy (default: <Original>_Copy)."
+          }
+        },
+        "required": [
+          "guid"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_rc_search_assets",
+      "description": "Search OVERDARE's Unreal asset library (StaticMesh, Texture2D, etc.) via Remote Control. Use to find 3D meshes/textures by name or class. e.g. classNames=['StaticMesh'], query='tree'.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "default": "",
+            "description": "Name substring."
+          },
+          "classNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "e.g. [\"StaticMesh\"]."
+          },
+          "packagePaths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "e.g. [\"/Game/CreatorPlatform\"]."
+          },
+          "recursive": {
+            "type": "boolean",
+            "default": true
+          },
+          "limit": {
+            "type": "integer",
+            "default": 25
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_rc_call",
+      "description": "Call a UFunction on an Unreal object via Remote Control (advanced, low-level). objectPath is a UObject path; functionName + parameters per the UFunction signature.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "objectPath": {
+            "type": "string"
+          },
+          "functionName": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        },
+        "required": [
+          "objectPath",
+          "functionName"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_rc_property",
+      "description": "Read or write a property on an Unreal object via Remote Control. Omit `value` to read; provide it to write.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "objectPath": {
+            "type": "string"
+          },
+          "propertyName": {
+            "type": "string"
+          },
+          "value": {
+            "description": "If provided, writes; otherwise reads."
+          }
+        },
+        "required": [
+          "objectPath",
+          "propertyName"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_rc_describe",
+      "description": "Describe an Unreal object (its properties/functions) via Remote Control.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "objectPath": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "objectPath"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_rc_batch",
+      "description": "Run several Unreal Remote Control requests in one round-trip (PUT /remote/batch). Each item is {URL, Verb, Body?}. Advanced/low-level — efficient for bulk property reads/writes on UObjects.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "requests": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "RequestId": {
+                  "type": "number"
+                },
+                "URL": {
+                  "type": "string",
+                  "description": "e.g. \"/remote/object/property\"."
+                },
+                "Verb": {
+                  "type": "string",
+                  "description": "\"GET\" | \"PUT\"."
+                },
+                "Body": {
+                  "type": "object",
+                  "additionalProperties": {}
+                }
+              },
+              "required": [
+                "URL",
+                "Verb"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "description": "Remote Control requests to batch."
+          }
+        },
+        "required": [
+          "requests"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_rc_python",
+      "description": "Run an Unreal Python command in the editor (ExecutePythonCommand) via Remote Control. EXPERIMENTAL — OVERDARE's build may omit/sandbox the Python plugin; this tool first probes availability (read-only) and refuses if absent. NOTE: Python acts on the live Unreal level, NOT the saveable Lua/.ovdrjm layer — changes won't persist to the game.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "Unreal Python source, e.g. \"import unreal; print(unreal.SystemLibrary.get_engine_version())\"."
+          }
+        },
+        "required": [
+          "command"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_rc_list_actors",
+      "description": "Introspect a live Unreal object via Remote Control describe (EXPERIMENTAL, low-level). The OVERDARE world/level object path is build-specific — pass objectPath to inspect a known object. For the game DataModel tree, use overdare_browse instead.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "objectPath": {
+            "type": "string",
+            "description": "UObject path to describe (e.g. a path from overdare_rc_search_assets). Defaults to a generic engine object."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_status",
+      "description": "Diagnostic: report what's reachable and configured — Studio RPC (13377), UE Remote Control (30010), Unreal Python availability, the resolved project file, and OVERDARE_PROJECT_DIR. Call this first when something isn't working, or to confirm the environment before building. (May take a few seconds if Studio is down.)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "overdare_rpc",
+      "description": "Low-level escape hatch: call any Studio RPC method with raw params. Use for methods without a dedicated tool or to probe the protocol. Verified methods: level.browse/apply/save.file/publish, script.add, instance.delete, game.play/stop/screenshot. (Note: instance.read/upsert/move and script.read/edit/grep are NOT available on the current Studio build.)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "description": "RPC method, e.g. \"level.browse\"."
+          },
+          "params": {
+            "type": "object",
+            "additionalProperties": {},
+            "description": "Raw params object."
+          }
+        },
+        "required": [
+          "method"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+[{"name":"overdare_asset_import","arguments":{"assetId":"ovdrassetid://45948800","assetName":"rig_japan_full","confirmStopped":true}},
+ {"name":"overdare_asset_import","arguments":{"assetId":"ovdrassetid://45950100","assetName":"rig_korea_full","confirmStopped":true}},
+ {"name":"overdare_save","arguments":{}}]

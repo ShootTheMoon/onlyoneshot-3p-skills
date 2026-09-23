@@ -1,0 +1,13 @@
+Map/video/frames/
+_animation_tools/renders/
+GameIntegration/*.png
+*.fbm/
+_tex_tmp/
+__pycache__/
+*.mp4
+*.zip
+*.ovdrjm
+*.bak
+*.blend
+*.blend1
+*.jsonl

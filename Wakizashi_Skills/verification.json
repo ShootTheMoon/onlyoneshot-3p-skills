@@ -1,0 +1,46 @@
+{
+  "Idle": {
+    "max_error_m": 1.1324882507324219e-05,
+    "pass": true
+  },
+  "Attack1": {
+    "max_error_m": 1.1205673217773438e-05,
+    "pass": true
+  },
+  "Attack2": {
+    "max_error_m": 1.0967254638671875e-05,
+    "pass": true
+  },
+  "Attack3": {
+    "max_error_m": 1.0967254638671875e-05,
+    "pass": true
+  },
+  "BlockIn": {
+    "max_error_m": 1.2159347534179688e-05,
+    "pass": true
+  },
+  "BlockHold": {
+    "max_error_m": 7.3909759521484375e-06,
+    "pass": true
+  },
+  "BlockOut": {
+    "max_error_m": 1.4126300811767578e-05,
+    "pass": true
+  },
+  "KunaiThrow": {
+    "max_error_m": 4.303455352783203e-05,
+    "pass": true
+  },
+  "Teleport": {
+    "max_error_m": 1.1682510375976562e-05,
+    "pass": true
+  },
+  "Draw": {
+    "max_error_m": 1.2069940567016602e-05,
+    "pass": true
+  },
+  "Ryunochi": {
+    "max_error_m": 1.3709068298339844e-05,
+    "pass": true
+  }
+}

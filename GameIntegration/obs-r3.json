@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"instances\": {\n    \"status\": \"ok\",\n    \"data\": {\n      \"success\": true,\n      \"clientId\": \"919c0708-4c58-cbe9-dc14-5e8f6ccbd58e\",\n      \"world\": \"client\",\n      \"worldNote\": \"Read from the client world the input tools drive. Server-side rules and collision are judged on the authority world, which can hold a different value for the same instance while replication is in flight.\",\n      \"requested\": 2,\n      \"found\": 2,\n      \"instances\": [\n        {\n          \"query\": \"rig_japan_full\",\n          \"status\": \"ok\",\n          \"path\": \"rig_japan_full\",\n          \"class\": \"Model\",\n          \"name\": \"rig_japan_full\",\n          \"matches\": 2,\n          \"otherPaths\": [\n            \"rig_japan_full.rig_japan_full\"\n          ],\n          \"ambiguityNote\": \"2 instances in the running world are called \\\"rig_japan_full\\\"; this answer is the one at rig_japan_full. A name is only unique among siblings, so ask by path when it matters.\"\n        },\n        {\n          \"query\": \"rig_korea_full\",\n          \"status\": \"ok\",\n          \"path\": \"rig_korea_full\",\n          \"class\": \"Model\",\n          \"name\": \"rig_korea_full\",\n          \"matches\": 2,\n          \"otherPaths\": [\n            \"rig_korea_full.rig_korea_full\"\n          ],\n          \"ambiguityNote\": \"2 instances in the running world are called \\\"rig_korea_full\\\"; this answer is the one at rig_korea_full. A name is only unique among siblings, so ask by path when it matters.\"\n        }\n      ]\n    }\n  },\n  \"outcome\": \"ok\"\n}"
+    }
+  ]
+}

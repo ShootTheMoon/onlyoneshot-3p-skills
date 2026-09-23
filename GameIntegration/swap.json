@@ -1,0 +1,3 @@
+[{"name":"overdare_set_project","arguments":{"dir":"C:/Users/29/Desktop/onlyonetap"}},
+ {"name":"overdare_delete_instance","arguments":{"guid":"54E32FDD4EA3C37CA1D8F78BF9C5B2F8"}},
+ {"name":"overdare_asset_import","arguments":{"assetId":"ovdrassetid://45942200","assetName":"preview_rig_japan","confirmStopped":true},"output":"C:/Users/29/Desktop/3y/GameIntegration/swap-out.json"}]

@@ -1,0 +1,1 @@
+[{"name":"overdare_input_inject","arguments":{"events":[{"type":"key","key":"Tab","action":"press"}]}},{"name":"overdare_ui_browse","arguments":{"paths":["PlayerGui.LobbyUI.SkillPreview_1","PlayerGui.LobbyUI.SkillPreview_4","PlayerGui.LobbyUI.InfoButton"]}}]

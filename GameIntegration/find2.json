@@ -1,0 +1,3 @@
+[{"name":"overdare_set_project","arguments":{"dir":"C:/Users/29/Desktop/onlyonetap"}},
+ {"name":"overdare_find","arguments":{"query":"Wakizashi_Viewmodel_Split"},"output":"C:/Users/29/Desktop/3y/GameIntegration/find-wak.json"},
+ {"name":"overdare_find","arguments":{"query":"Korea1_Arms_v2"},"output":"C:/Users/29/Desktop/3y/GameIntegration/find-bow.json"}]

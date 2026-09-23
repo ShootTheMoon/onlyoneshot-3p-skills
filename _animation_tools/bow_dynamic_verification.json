@@ -1,0 +1,10 @@
+{
+  "BowVertical": {
+    "max_added_pelvis_lowering_m": 0.045,
+    "max_overreach_m": 0
+  },
+  "BowHorizontal": {
+    "max_added_pelvis_lowering_m": 0.045,
+    "max_overreach_m": 0
+  }
+}

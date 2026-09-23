@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[\n  {\n    \"guid\": \"54E32FDD4EA3C37CA1D8F78BF9C5B2F8\",\n    \"name\": \"preview_rig_japan\",\n    \"class\": \"Model\",\n    \"path\": \"ReplicatedStorage.preview_rig_japan\"\n  },\n  {\n    \"guid\": \"8EC6191049DCF8B0333B17BEE462F115\",\n    \"name\": \"preview_rig_japan\",\n    \"class\": \"MeshPart\",\n    \"path\": \"ReplicatedStorage.preview_rig_japan.preview_rig_japan\"\n  }\n]"
+    }
+  ]
+}

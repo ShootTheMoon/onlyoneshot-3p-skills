@@ -1,0 +1,16 @@
+{
+  "BowVertical": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 7.41795853771726,
+    "sample_step_frames": 1
+  },
+  "BowHorizontal": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 7.978581318565553,
+    "sample_step_frames": 1
+  }
+}

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+const root='C:/Users/29/Desktop/3y/GameIntegration/';
+const project='C:/Users/29/Desktop/onlyonetap/onlyoneshot.ovdrjm';
+const b=fs.readFileSync(project); const doc=JSON.parse(b.toString(b[0]===255?'utf16le':'utf8').replace(/^\uFEFF/,''));
+const nodes=[];function walk(n){nodes.push(n);for(const c of n.LuaChildren||[])walk(c)}walk(doc.Root);
+const lobby=nodes.find(n=>n.ActorGuid==='4646939AD4155F7659E460213C55EC01');
+if(lobby.Source!==fs.readFileSync(root+'LobbyUI.before.lua','utf8'))throw Error('Lobby changed: rebase first');
+for(const name of ['SkillPreviewConfig','SkillPreviewPlayer'])if(nodes.some(n=>n.Name===name))throw Error('Already exists: '+name);
+fs.copyFileSync(project,root+'onlyoneshot.before-skill-preview.ovdrjm');
+const calls=[{name:'overdare_set_project',arguments:{dir:'C:/Users/29/Desktop/onlyonetap'}},{name:'overdare_stop',arguments:{}}];
+for(const name of ['SkillPreviewConfig','SkillPreviewPlayer'])calls.push({name:'overdare_script_add',arguments:{class:'ModuleScript',parent:'ReplicatedStorage',name,source:fs.readFileSync(root+name+'.lua','utf8')}});
+calls.push({name:'overdare_script_edit',arguments:{guid:lobby.ActorGuid,source:fs.readFileSync(root+'LobbyUI.lua','utf8')}},{name:'overdare_save',arguments:{}},{name:'overdare_play',arguments:{}});
+fs.writeFileSync(root+'apply.json',JSON.stringify(calls));

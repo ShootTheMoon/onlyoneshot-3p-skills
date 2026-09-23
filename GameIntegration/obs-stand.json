@@ -1,0 +1,1 @@
+[{"name":"overdare_observe","arguments":{"character":true,"instances":["Lobby_Stand","LocalSkillPreview","LocalSkillPreviewFloor"],"fields":["Name","ClassName","CFrame","Size","Anchored","CanCollide"]},"output":"C:/Users/29/Desktop/3y/GameIntegration/stand.json"}]

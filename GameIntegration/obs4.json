@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"instances\": {\n    \"status\": \"ok\",\n    \"data\": {\n      \"success\": true,\n      \"clientId\": \"46770fd2-48e8-0b18-4662-6b9ba6a29289\",\n      \"world\": \"client\",\n      \"worldNote\": \"Read from the client world the input tools drive. Server-side rules and collision are judged on the authority world, which can hold a different value for the same instance while replication is in flight.\",\n      \"requested\": 3,\n      \"found\": 3,\n      \"instances\": [\n        {\n          \"query\": \"Head\",\n          \"status\": \"ok\",\n          \"path\": \"Seungpyo1007.Head\",\n          \"class\": \"MeshPart\",\n          \"name\": \"Head\",\n          \"Transparency\": 0,\n          \"matches\": 2,\n          \"otherPaths\": [\n            \"Seungpyo1007.Skeleton.Root.LowerTorso.UpperTorso01.UpperTorso02.Head\"\n          ],\n          \"ambiguityNote\": \"2 instances in the running world are called \\\"Head\\\"; this answer is the one at Seungpyo1007.Head. A name is only unique among siblings, so ask by path when it matters.\"\n        },\n        {\n          \"query\": \"Torso\",\n          \"status\": \"ok\",\n          \"path\": \"Seungpyo1007.Torso\",\n          \"class\": \"MeshPart\",\n          \"name\": \"Torso\",\n          \"Transparency\": 0\n        },\n        {\n          \"query\": \"RightArm\",\n          \"status\": \"ok\",\n          \"path\": \"Seungpyo1007.RightArm\",\n          \"class\": \"MeshPart\",\n          \"name\": \"RightArm\",\n          \"Transparency\": 0\n        }\n      ]\n    }\n  },\n  \"outcome\": \"ok\"\n}"
+    }
+  ]
+}

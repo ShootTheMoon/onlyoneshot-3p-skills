@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[\n  {\n    \"guid\": \"14D0FCA3A1ED23B7C7565D2DB555B034\",\n    \"name\": \"SkillPreviewConfig\",\n    \"class\": \"ModuleScript\",\n    \"path\": \"ReplicatedStorage.SkillPreviewConfig\"\n  },\n  {\n    \"guid\": \"E18E7DA568B81A74D7C7D3DBA4725678\",\n    \"name\": \"SkillPreviewPlayer\",\n    \"class\": \"ModuleScript\",\n    \"path\": \"ReplicatedStorage.SkillPreviewPlayer\"\n  }\n]"
+    }
+  ]
+}

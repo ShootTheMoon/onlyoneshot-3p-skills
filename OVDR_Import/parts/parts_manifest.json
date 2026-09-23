@@ -1,0 +1,82 @@
+[
+ {
+  "group": "stage_ground",
+  "file": "C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_ground_overdare.fbx",
+  "tris": 4528,
+  "objects": 22,
+  "center_m_blender": [
+   -0.0259,
+   -0.0007,
+   -0.199
+  ],
+  "size_m_blender": [
+   28.027,
+   27.975,
+   0.881
+  ]
+ },
+ {
+  "group": "stage_fence",
+  "file": "C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_fence_overdare.fbx",
+  "tris": 22008,
+  "objects": 394,
+  "center_m_blender": [
+   0.0705,
+   4.6957,
+   0.86
+  ],
+  "size_m_blender": [
+   16.256,
+   7.659,
+   2.12
+  ]
+ },
+ {
+  "group": "stage_gate",
+  "file": "C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_gate_overdare.fbx",
+  "tris": 3482,
+  "objects": 66,
+  "center_m_blender": [
+   0.0,
+   5.6,
+   2.175
+  ],
+  "size_m_blender": [
+   5.0,
+   2.136,
+   4.65
+  ]
+ },
+ {
+  "group": "stage_trees",
+  "file": "C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_trees_overdare.fbx",
+  "tris": 5344,
+  "objects": 48,
+  "center_m_blender": [
+   0.2145,
+   3.5134,
+   1.7772
+  ],
+  "size_m_blender": [
+   20.977,
+   9.069,
+   5.074
+  ]
+ },
+ {
+  "group": "stage_props",
+  "file": "C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_props_overdare.fbx",
+  "tris": 2836,
+  "objects": 57,
+  "center_m_blender": [
+   0.0658,
+   3.1556,
+   1.6464
+  ],
+  "size_m_blender": [
+   9.492,
+   4.531,
+   3.307
+  ]
+ }
+]

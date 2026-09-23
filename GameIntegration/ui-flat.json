@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "clientId": "725688f2-4762-ce52-9add-bd9a935cc778",
+  "viewport": {
+    "width": 1086,
+    "height": 868
+  },
+  "elements": [
+    {
+      "path": "PlayerGui.LobbyUI",
+      "class": "ScreenGui",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "visible": true,
+      "onScreen": true
+    }
+  ],
+  "truncated": true
+}

@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "WARNING: ovdrassetid://45942200 is not in the curated catalog — verify it is a real Asset Drawer MODEL id (a bad id hangs Studio).\n{\n  \"imported\": \"ovdrassetid://45942200\",\n  \"assetName\": \"preview_rig_japan\",\n  \"result\": {\n    \"success\": true,\n    \"guids\": [\n      \"D51EAE514FB9842AB5AE8A9B85D78C35\"\n    ]\n  }\n}"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[\n  {\n    \"guid\": \"334BD43D4B799203BAFF18B6F72364B0\",\n    \"name\": \"w3p_idle\",\n    \"class\": \"Model\",\n    \"path\": \"Workspace.w3p_idle\"\n  },\n  {\n    \"guid\": \"937A7FA449FD858035AE35B01416D332\",\n    \"name\": \"w3p_idle\",\n    \"class\": \"MeshPart\",\n    \"path\": \"Workspace.w3p_idle.w3p_idle\"\n  }\n]"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+C:\Users\29\Desktop\3y\Map\assemble_video.py:64: DeprecationWarning: 'ImageStrip.frame_final_duration' is expected to be removed in Blender 6.0
+  st.frame_final_duration = n
+Traceback (most recent call last):
+  File "C:\Users\29\Desktop\3y\Map\assemble_video.py", line 68, in <module>
+    vs.render.image_settings.file_format = 'FFMPEG'
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: bpy_struct: item.attr = val: enum "FFMPEG" not found in ('AVIF', 'JPEG', 'OPEN_EXR', 'PNG', 'WEBP', 'BMP', 'CINEON', 'DPX', 'IRIS', 'JPEG2000', 'HDR', 'TARGA', 'TARGA_RAW', 'TIFF')
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

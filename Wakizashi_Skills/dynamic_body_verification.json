@@ -1,0 +1,46 @@
+{
+  "Idle": {
+    "max_added_pelvis_lowering_m": 0.008,
+    "max_overreach_m": 0
+  },
+  "Attack1": {
+    "max_added_pelvis_lowering_m": 0.055,
+    "max_overreach_m": 0
+  },
+  "Attack2": {
+    "max_added_pelvis_lowering_m": 0.055,
+    "max_overreach_m": 0
+  },
+  "Attack3": {
+    "max_added_pelvis_lowering_m": 0.055,
+    "max_overreach_m": 0
+  },
+  "BlockIn": {
+    "max_added_pelvis_lowering_m": 0.055,
+    "max_overreach_m": 0
+  },
+  "BlockHold": {
+    "max_added_pelvis_lowering_m": 0.055,
+    "max_overreach_m": 0
+  },
+  "BlockOut": {
+    "max_added_pelvis_lowering_m": 0.055,
+    "max_overreach_m": 0
+  },
+  "KunaiThrow": {
+    "max_added_pelvis_lowering_m": 0.035,
+    "max_overreach_m": 0
+  },
+  "Teleport": {
+    "max_added_pelvis_lowering_m": 0.04,
+    "max_overreach_m": 0
+  },
+  "Draw": {
+    "max_added_pelvis_lowering_m": 0.04,
+    "max_overreach_m": 0
+  },
+  "Ryunochi": {
+    "max_added_pelvis_lowering_m": 0.11999131276435408,
+    "max_overreach_m": 0
+  }
+}

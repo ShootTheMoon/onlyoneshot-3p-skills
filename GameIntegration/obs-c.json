@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"character\": {\n    \"status\": \"ok\",\n    \"data\": {\n      \"success\": true,\n      \"clientId\": \"74ecaf80-4966-781e-b6f3-e8969069ac9d\",\n      \"character\": {\n        \"CFrame\": {\n          \"ObjectType\": \"CFrame\",\n          \"Position\": {\n            \"ObjectType\": \"Vector3\",\n            \"X\": 0,\n            \"Y\": 8104.64990234375,\n            \"Z\": -620\n          },\n          \"Orientation\": {\n            \"ObjectType\": \"Vector3\",\n            \"X\": 0,\n            \"Y\": -180,\n            \"Z\": 0\n          }\n        },\n        \"speed\": 0,\n        \"moving\": false,\n        \"facing\": {\n          \"yaw\": 180,\n          \"pitch\": 0\n        },\n        \"gameTimeSeconds\": 105.24013134464622,\n        \"standingOn\": {\n          \"instanceName\": \"Lobby_Stand\",\n          \"distance\": 0\n        }\n      }\n    }\n  },\n  \"instances\": {\n    \"status\": \"ok\",\n    \"data\": {\n      \"success\": true,\n      \"clientId\": \"74ecaf80-4966-781e-b6f3-e8969069ac9d\",\n      \"world\": \"client\",\n      \"worldNote\": \"Read from the client world the input tools drive. Server-side rules and collision are judged on the authority world, which can hold a different value for the same instance while replication is in flight.\",\n      \"searched\": \"wholeWorld\",\n      \"namePattern\": \"Torso|Head|LeftArm|RightArm\",\n      \"matchCount\": 0,\n      \"instances\": []\n    }\n  },\n  \"outcome\": \"ok\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+00:00.375  blend            | Read blend: "C:\Users\29\Desktop\3y\Gukgung_3P.blend"
+BOW_AUDIT {'BowVertical': {'collision_count': 0, 'pairs': {}, 'first_collisions': [], 'max_forearm_delta_deg': 3.7091265448126083, 'sample_step_frames': 0.5}, 'BowHorizontal': {'collision_count': 0, 'pairs': {}, 'first_collisions': [], 'max_forearm_delta_deg': 3.989569416378277, 'sample_step_frames': 0.5}}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

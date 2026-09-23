@@ -1,0 +1,153 @@
+{
+ "pose_action": "Gukgung_3P_HorizontalAttack",
+ "frame": 1,
+ "weapons": [
+  [
+   "Gukgung_3P_Bow",
+   "Gukgung_Bow"
+  ],
+  [
+   "Gukgung_3P_String",
+   "Gukgung_String"
+  ],
+  [
+   "Gukgung_3P_Arrow",
+   "Gukgung_Arrow"
+  ]
+ ],
+ "bones": {
+  "Gukgung_3P_Bow": "LeftHand",
+  "Gukgung_3P_String": "LeftHand",
+  "Gukgung_3P_Arrow": "RightHand"
+ },
+ "mesh_name": "Gukgung3P",
+ "bake_size": 1024,
+ "clips": [
+  "Gukgung_3P_DrawRelease",
+  "Gukgung_3P_HorizontalAttack"
+ ],
+ "drop_bones": [
+  "Head_Nub",
+  "LeftFoot_Nub",
+  "RightFoot_Nub"
+ ],
+ "axis_forward": "-Z",
+ "axis_up": "Y",
+ "apply_scale": true,
+ "global_scale": 100,
+ "scale_opt": "FBX_SCALE_NONE",
+ "rename_bones": {
+  "RightHand001": "RightItem",
+  "LeftHand001": "LeftItem"
+ },
+ "move_bones": {
+  "RightItem": [
+   -33.77,
+   -12.29,
+   63.67
+  ],
+  "LeftItem": [
+   33.77,
+   -12.29,
+   63.67
+  ]
+ },
+ "add_bones": [
+  {
+   "name": "ThirdPersonCamera",
+   "parent": "Root",
+   "head": [
+    0,
+    140.5,
+    148.6
+   ]
+  },
+  {
+   "name": "IKFootRoot",
+   "parent": "Root",
+   "head": [
+    0,
+    0,
+    0
+   ],
+   "dir": [
+    0,
+    5,
+    0
+   ]
+  },
+  {
+   "name": "IKLeftFoot",
+   "parent": "IKFootRoot",
+   "head": [
+    10.3,
+    1.76,
+    17.36
+   ]
+  },
+  {
+   "name": "IKRightFoot",
+   "parent": "IKFootRoot",
+   "head": [
+    -10.3,
+    1.76,
+    17.36
+   ]
+  },
+  {
+   "name": "IKHandRoot",
+   "parent": "Root",
+   "head": [
+    0,
+    0,
+    0
+   ],
+   "dir": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "IKHandGun",
+   "parent": "IKHandRoot",
+   "head": [
+    -35.57,
+    -4.33,
+    75.15
+   ]
+  },
+  {
+   "name": "IKLeftHand",
+   "parent": "IKHandGun",
+   "head": [
+    35.57,
+    -4.33,
+    75.15
+   ]
+  },
+  {
+   "name": "IKRightHand",
+   "parent": "IKHandGun",
+   "head": [
+    -35.57,
+    -4.33,
+    75.15
+   ],
+   "dir": [
+    0,
+    5,
+    0
+   ]
+  },
+  {
+   "name": "FirstPersonCamera",
+   "parent": "Head",
+   "head": [
+    0,
+    -19.95,
+    142.54
+   ]
+  }
+ ]
+}

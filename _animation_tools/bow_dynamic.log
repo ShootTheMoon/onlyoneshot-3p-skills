@@ -1,0 +1,214 @@
+00:02.359  blend            | Read blend: "C:\Users\29\Desktop\3y\Gukgung_3P.blend"
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\Gukgung_3P_For_OVDR.fbx'
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+export finished in 0.1028 sec.
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\Gukgung_3P_WeaponsOnly.fbx'
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+export finished in 0.0471 sec.
+INFO Draco is available, use library at C:\Program Files (x86)\Steam\steamapps\common\Blender\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files (x86)\Steam\steamapps\common\Blender\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+16:06:47 | INFO: Starting glTF 2.0 export
+16:06:47 | INFO: Extracting primitive: Mesh.001
+16:06:47 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:47 | INFO: Primitives created: 1
+16:06:47 | INFO: Extracting primitive: Mesh
+16:06:47 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:47 | INFO: Primitives created: 1
+16:06:47 | INFO: Extracting primitive: Mesh.005
+16:06:47 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:47 | INFO: Primitives created: 1
+16:06:47 | INFO: Extracting primitive: Mesh.003
+16:06:47 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:47 | INFO: Primitives created: 1
+16:06:47 | INFO: Extracting primitive: Mesh.004
+16:06:47 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:47 | INFO: Primitives created: 1
+16:06:47 | INFO: Extracting primitive: Mesh.002
+16:06:47 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:47 | INFO: Primitives created: 1
+16:06:47 | INFO: Extracting primitive: Arrow_Gukgung_mesh.004
+16:06:47 | INFO: Primitives created: 5
+16:06:47 | INFO: Extracting primitive: Gukgung_Bow_mesh.004
+16:06:47 | INFO: Primitives created: 1
+16:06:47 | INFO: Extracting primitive: Gukgung_DeformableString.003
+16:06:47 | INFO: Primitives created: 1
+16:06:48 | INFO: Finished glTF 2.0 export in 0.20282697677612305 s
+
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\Gukgung_3P_HorizontalAttack_For_OVDR.fbx'
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+export finished in 0.1028 sec.
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\Gukgung_3P_HorizontalAttack_WeaponsOnly.fbx'
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+(bpy.data.armatures['Gukgung_WeaponSkeleton.003'], 'POSE')
+export finished in 0.0516 sec.
+16:06:48 | INFO: Starting glTF 2.0 export
+16:06:48 | INFO: Extracting primitive: Mesh.001
+16:06:48 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:48 | INFO: Primitives created: 1
+16:06:48 | INFO: Extracting primitive: Mesh
+16:06:48 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:48 | INFO: Primitives created: 1
+16:06:48 | INFO: Extracting primitive: Mesh.005
+16:06:48 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:48 | INFO: Primitives created: 1
+16:06:48 | INFO: Extracting primitive: Mesh.003
+16:06:48 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:48 | INFO: Primitives created: 1
+16:06:48 | INFO: Extracting primitive: Mesh.004
+16:06:48 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:48 | INFO: Primitives created: 1
+16:06:48 | INFO: Extracting primitive: Mesh.002
+16:06:48 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+16:06:48 | INFO: Primitives created: 1
+16:06:48 | INFO: Extracting primitive: Arrow_Gukgung_mesh.004
+16:06:48 | INFO: Primitives created: 5
+16:06:48 | INFO: Extracting primitive: Gukgung_Bow_mesh.004
+16:06:48 | INFO: Primitives created: 1
+16:06:48 | INFO: Extracting primitive: Gukgung_DeformableString.003
+16:06:48 | INFO: Primitives created: 1
+16:06:48 | INFO: Finished glTF 2.0 export in 0.1970987319946289 s
+00:07.297  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0001.png'
+00:07.328  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0003.png'
+00:07.359  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0005.png'
+00:07.391  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0007.png'
+00:07.422  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0009.png'
+00:07.453  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0011.png'
+00:07.484  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0013.png'
+00:07.531  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0015.png'
+00:07.562  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0017.png'
+00:07.609  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0019.png'
+00:07.641  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0021.png'
+00:07.672  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0023.png'
+00:07.703  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0025.png'
+00:07.734  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0027.png'
+00:07.766  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0029.png'
+00:07.797  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0031.png'
+00:07.828  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0033.png'
+00:07.859  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0035.png'
+00:07.906  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0037.png'
+00:07.937  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0039.png'
+00:07.969  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0041.png'
+00:08.000  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0043.png'
+00:08.031  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0045.png'
+00:08.078  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0047.png'
+00:08.109  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0049.png'
+00:08.141  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0051.png'
+00:08.172  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0053.png'
+00:08.203  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0055.png'
+00:08.234  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0057.png'
+00:08.281  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0059.png'
+00:08.312  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0061.png'
+00:08.359  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0063.png'
+00:08.391  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0065.png'
+00:08.422  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0067.png'
+00:08.453  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0069.png'
+00:08.484  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0071.png'
+00:08.516  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0073.png'
+00:08.547  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0075.png'
+00:08.578  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0077.png'
+00:08.625  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0079.png'
+00:08.656  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0081.png'
+00:08.687  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0083.png'
+00:08.719  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0085.png'
+00:08.750  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0087.png'
+00:08.797  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0089.png'
+00:08.828  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowVertical\frame_0091.png'
+00:08.891  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0001.png'
+00:08.922  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0003.png'
+00:08.953  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0005.png'
+00:09.000  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0007.png'
+00:09.031  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0009.png'
+00:09.062  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0011.png'
+00:09.109  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0013.png'
+00:09.141  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0015.png'
+00:09.187  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0017.png'
+00:09.219  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0019.png'
+00:09.266  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0021.png'
+00:09.297  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0023.png'
+00:09.328  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0025.png'
+00:09.359  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0027.png'
+00:09.391  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0029.png'
+00:09.422  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0031.png'
+00:09.469  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0033.png'
+00:09.516  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0035.png'
+00:09.547  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0037.png'
+00:09.578  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0039.png'
+00:09.609  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0041.png'
+00:09.641  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0043.png'
+00:09.687  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0045.png'
+00:09.719  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0047.png'
+00:09.750  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0049.png'
+00:09.781  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0051.png'
+00:09.828  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0053.png'
+00:09.859  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0055.png'
+00:09.891  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0057.png'
+00:09.937  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0059.png'
+00:09.969  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0061.png'
+00:10.016  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0063.png'
+00:10.047  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0065.png'
+00:10.078  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0067.png'
+00:10.109  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0069.png'
+00:10.141  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0071.png'
+00:10.172  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0073.png'
+00:10.203  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0075.png'
+00:10.250  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0077.png'
+00:10.281  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0079.png'
+00:10.328  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0081.png'
+00:10.359  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0083.png'
+00:10.391  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0085.png'
+00:10.437  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0087.png'
+00:10.469  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0089.png'
+00:10.500  render           | Saved: 'C:\Users\29\Desktop\3y\_animation_tools\renders\BowHorizontal\frame_0091.png'
+
+Info: Saved as "Gukgung_3P.blend"
+FBX version: 7400
+16:06:54 | INFO: Data are loaded, start creating Blender stuff
+16:06:54 | INFO: Blender create Mesh node Mesh.001
+16:06:54 | INFO: Blender create Mesh node Mesh
+16:06:54 | INFO: Blender create Mesh node Mesh.005
+16:06:54 | INFO: Blender create Mesh node Mesh.003
+16:06:54 | INFO: Blender create Mesh node Mesh.004
+16:06:54 | INFO: Blender create Mesh node Mesh.002
+16:06:54 | INFO: Blender create Mesh node Arrow_Gukgung_mesh.004
+16:06:54 | INFO: Blender create Mesh node Gukgung_Bow_mesh.004
+16:06:54 | INFO: Blender create Mesh node Gukgung_DeformableString.003
+16:06:54 | INFO: glTF import finished in 0.04s
+FBX version: 7400
+16:06:54 | INFO: Data are loaded, start creating Blender stuff
+16:06:54 | INFO: Blender create Mesh node Mesh.001
+16:06:54 | INFO: Blender create Mesh node Mesh
+16:06:54 | INFO: Blender create Mesh node Mesh.005
+16:06:54 | INFO: Blender create Mesh node Mesh.003
+16:06:54 | INFO: Blender create Mesh node Mesh.004
+16:06:54 | INFO: Blender create Mesh node Mesh.002
+16:06:54 | INFO: Blender create Mesh node Arrow_Gukgung_mesh.004
+16:06:54 | INFO: Blender create Mesh node Gukgung_Bow_mesh.004
+16:06:54 | INFO: Blender create Mesh node Gukgung_DeformableString.003
+16:06:54 | INFO: glTF import finished in 0.03s
+BOW_RESULTS {'BowVertical': {'fbx': {'max_error_m': 2.6941299438476562e-05, 'pass': True}, 'glb': {'max_error_m': 3.3974647521972656e-06, 'pass': True}}, 'BowHorizontal': {'fbx': {'max_error_m': 2.0384788513183594e-05, 'pass': True}, 'glb': {'max_error_m': 3.039836883544922e-06, 'pass': True}}}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

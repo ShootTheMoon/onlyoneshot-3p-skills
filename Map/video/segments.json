@@ -1,0 +1,106 @@
+[
+ {
+  "tag": "00_Wakizashi_3P_Idle",
+  "weapon": "와키자시",
+  "label": "대기",
+  "seconds": 2.033333333333333,
+  "slow": false,
+  "frames": 61
+ },
+ {
+  "tag": "01_Wakizashi_3P_Attack1",
+  "weapon": "와키자시",
+  "label": "일반공격 1타",
+  "seconds": 2.1,
+  "slow": false,
+  "frames": 63
+ },
+ {
+  "tag": "02_Wakizashi_3P_Attack2",
+  "weapon": "와키자시",
+  "label": "일반공격 2타",
+  "seconds": 2.1,
+  "slow": false,
+  "frames": 63
+ },
+ {
+  "tag": "03_Wakizashi_3P_Attack3",
+  "weapon": "와키자시",
+  "label": "일반공격 3타",
+  "seconds": 2.3333333333333335,
+  "slow": false,
+  "frames": 70
+ },
+ {
+  "tag": "04_Wakizashi_3P_BlockIn",
+  "weapon": "와키자시",
+  "label": "막기 진입",
+  "seconds": 0.2,
+  "slow": true,
+  "frames": 11
+ },
+ {
+  "tag": "05_Wakizashi_3P_BlockHold",
+  "weapon": "와키자시",
+  "label": "막기 유지",
+  "seconds": 1.0333333333333334,
+  "slow": false,
+  "frames": 31
+ },
+ {
+  "tag": "06_Wakizashi_3P_BlockOut",
+  "weapon": "와키자시",
+  "label": "막기 해제",
+  "seconds": 0.2,
+  "slow": true,
+  "frames": 11
+ },
+ {
+  "tag": "07_Wakizashi_3P_KunaiThrow",
+  "weapon": "와키자시",
+  "label": "쿠나이 투척",
+  "seconds": 2.533333333333333,
+  "slow": false,
+  "frames": 76
+ },
+ {
+  "tag": "08_Wakizashi_3P_Teleport",
+  "weapon": "와키자시",
+  "label": "순간이동",
+  "seconds": 0.7,
+  "slow": true,
+  "frames": 41
+ },
+ {
+  "tag": "09_Wakizashi_3P_Draw",
+  "weapon": "와키자시",
+  "label": "칼 재장착",
+  "seconds": 3.1,
+  "slow": false,
+  "frames": 93
+ },
+ {
+  "tag": "10_Wakizashi_3P_Ryunochi",
+  "weapon": "와키자시",
+  "label": "용의 이빨 (궁극기)",
+  "seconds": 3.7666666666666666,
+  "slow": false,
+  "frames": 113
+ },
+ {
+  "tag": "11_Gukgung_3P_For_OVDR",
+  "weapon": "국궁",
+  "label": "세로 사격",
+  "seconds": 3.033333333333333,
+  "slow": false,
+  "frames": 91
+ },
+ {
+  "tag": "12_Gukgung_3P_HorizontalAttack_For_OVDR",
+  "weapon": "국궁",
+  "label": "가로 사격",
+  "seconds": 3.033333333333333,
+  "slow": false,
+  "frames": 91
+ }
+]

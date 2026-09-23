@@ -1,0 +1,1 @@
+import fs from 'node:fs';const p='C:/Users/29/Desktop/onlyonetap/onlyoneshot.ovdrjm';const b=fs.readFileSync(p);const d=JSON.parse(b.toString(b[0]===255?'utf16le':'utf8').replace(/^\uFEFF/,''));function walk(n){if(n.Name?.startsWith('SkillPreview'))console.log(n.Name,n.ActorGuid,n.Source?.length);for(const c of n.LuaChildren||[])walk(c)}walk(d.Root);

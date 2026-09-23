@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"success\": true,\n  \"clientId\": \"725688f2-4762-ce52-9add-bd9a935cc778\",\n  \"viewport\": {\n    \"width\": 1086,\n    \"height\": 868\n  },\n  \"elements\": [\n    {\n      \"path\": \"PlayerGui.LobbyUI\",\n      \"class\": \"ScreenGui\",\n      \"rect\": {\n        \"x\": 0,\n        \"y\": 0,\n        \"w\": 1,\n        \"h\": 1\n      },\n      \"center\": {\n        \"x\": 0.5,\n        \"y\": 0.5\n      },\n      \"visible\": true,\n      \"onScreen\": true\n    }\n  ],\n  \"truncated\": true\n}"
+    }
+  ]
+}

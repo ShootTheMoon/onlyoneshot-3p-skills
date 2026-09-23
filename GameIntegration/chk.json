@@ -1,0 +1,5 @@
+[{"name":"overdare_set_project","arguments":{"dir":"C:/Users/29/Desktop/onlyonetap"}},
+ {"name":"overdare_find","arguments":{"query":"preview_rig"},"output":"C:/Users/29/Desktop/3y/GameIntegration/c1.json"},
+ {"name":"overdare_find","arguments":{"query":"SkillPreviewModels"},"output":"C:/Users/29/Desktop/3y/GameIntegration/c2.json"},
+ {"name":"overdare_find","arguments":{"query":"Wakizashi3P"},"output":"C:/Users/29/Desktop/3y/GameIntegration/c3.json"},
+ {"name":"overdare_find","arguments":{"query":"Gukgung3P"},"output":"C:/Users/29/Desktop/3y/GameIntegration/c4.json"}]

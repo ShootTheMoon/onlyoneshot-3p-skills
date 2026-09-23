@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Idle",
+    "action": "Wakizashi_3P_Idle",
+    "duration": 2,
+    "end": 61,
+    "reference": "0-7s",
+    "events": [],
+    "max_reach_adjustment": 0.005766461438243997,
+    "sword_action": "Wakizashi_Idle_R_NormalGrip",
+    "kunai_action": "Wakizashi_Idle_Kunai",
+    "fbx": "Wakizashi_3P_Idle.fbx",
+    "left_sword_action": "Wakizashi_Idle_L_NormalGrip"
+  },
+  {
+    "name": "Attack1",
+    "action": "Wakizashi_3P_Attack1",
+    "duration": 2.0833,
+    "end": 63,
+    "reference": "7.2-9.3s; 13.9-16.0s",
+    "events": [
+      [
+        "hit",
+        1.0
+      ],
+      [
+        "combo",
+        1.7917
+      ]
+    ],
+    "max_reach_adjustment": 0.007512540088734976,
+    "sword_action": "Wakizashi_Attack1_R_NormalGrip",
+    "kunai_action": "Wakizashi_Attack1_Kunai",
+    "fbx": "Wakizashi_3P_Attack1.fbx",
+    "left_sword_action": "Wakizashi_Attack1_L_NormalGrip"
+  },
+  {
+    "name": "Attack2",
+    "action": "Wakizashi_3P_Attack2",
+    "duration": 2.0833,
+    "end": 63,
+    "reference": "9.3-11.4s; 16.0-18.1s",
+    "events": [
+      [
+        "hit",
+        1.0
+      ],
+      [
+        "combo",
+        1.5417
+      ]
+    ],
+    "max_reach_adjustment": 0.2968119994798273,
+    "sword_action": "Wakizashi_Attack2_R_NormalGrip",
+    "kunai_action": "Wakizashi_Attack2_Kunai",
+    "fbx": "Wakizashi_3P_Attack2.fbx",
+    "left_sword_action": "Wakizashi_Attack2_L_NormalGrip"
+  },
+  {
+    "name": "Attack3",
+    "action": "Wakizashi_3P_Attack3",
+    "duration": 2.2917,
+    "end": 70,
+    "reference": "11.4-13.7s; 18.1-20.4s",
+    "events": [
+      [
+        "dash_start",
+        0.9
+      ],
+      [
+        "x_slash",
+        1.0
+      ]
+    ],
+    "max_reach_adjustment": 0.14479198695638495,
+    "sword_action": "Wakizashi_Attack3_R_NormalGrip",
+    "kunai_action": "Wakizashi_Attack3_Kunai",
+    "fbx": "Wakizashi_3P_Attack3.fbx",
+    "left_sword_action": "Wakizashi_Attack3_L_NormalGrip"
+  },
+  {
+    "name": "BlockIn",
+    "action": "Wakizashi_3P_BlockIn",
+    "duration": 0.1667,
+    "end": 6,
+    "reference": "Block button; archived BlockIn timing",
+    "events": [],
+    "max_reach_adjustment": 0.14157777821975281,
+    "sword_action": "Wakizashi_BlockIn_R_NormalGrip",
+    "kunai_action": "Wakizashi_BlockIn_Kunai",
+    "fbx": "Wakizashi_3P_BlockIn.fbx",
+    "left_sword_action": "Wakizashi_BlockIn_L_NormalGrip"
+  },
+  {
+    "name": "BlockHold",
+    "action": "Wakizashi_3P_BlockHold",
+    "duration": 1,
+    "end": 31,
+    "reference": "Block held pose",
+    "events": [],
+    "max_reach_adjustment": 0.14157783347361996,
+    "sword_action": "Wakizashi_BlockHold_R_NormalGrip",
+    "kunai_action": "Wakizashi_BlockHold_Kunai",
+    "fbx": "Wakizashi_3P_BlockHold.fbx",
+    "left_sword_action": "Wakizashi_BlockHold_L_NormalGrip"
+  },
+  {
+    "name": "BlockOut",
+    "action": "Wakizashi_3P_BlockOut",
+    "duration": 0.1667,
+    "end": 6,
+    "reference": "Block button release; archived BlockOut timing",
+    "events": [],
+    "max_reach_adjustment": 0.14157783347361996,
+    "sword_action": "Wakizashi_BlockOut_R_NormalGrip",
+    "kunai_action": "Wakizashi_BlockOut_Kunai",
+    "fbx": "Wakizashi_3P_BlockOut.fbx",
+    "left_sword_action": "Wakizashi_BlockOut_L_NormalGrip"
+  },
+  {
+    "name": "KunaiThrow",
+    "action": "Wakizashi_3P_KunaiThrow",
+    "duration": 2.5,
+    "end": 76,
+    "reference": "21.0-23.5s",
+    "events": [
+      [
+        "draw_kunai",
+        0.45
+      ],
+      [
+        "throw",
+        2.1333333333333333
+      ],
+      [
+        "hold",
+        2.2083
+      ]
+    ],
+    "max_reach_adjustment": 0.041291587343456726,
+    "sword_action": "Wakizashi_KunaiThrow_R_NormalGrip",
+    "kunai_action": "Wakizashi_KunaiThrow_CorrectedRelease",
+    "fbx": "Wakizashi_3P_KunaiThrow.fbx",
+    "left_sword_action": "Wakizashi_KunaiThrow_L_NormalGrip"
+  },
+  {
+    "name": "Teleport",
+    "action": "Wakizashi_3P_Teleport",
+    "duration": 0.65,
+    "end": 21,
+    "reference": "24.5-25.2s",
+    "events": [
+      [
+        "teleport",
+        0.3
+      ]
+    ],
+    "max_reach_adjustment": 0.1453483620136703,
+    "sword_action": "Wakizashi_Teleport_R_NormalGrip",
+    "kunai_action": "Wakizashi_Teleport_Kunai",
+    "fbx": "Wakizashi_3P_Teleport.fbx",
+    "left_sword_action": "Wakizashi_Teleport_L_NormalGrip"
+  },
+  {
+    "name": "Draw",
+    "action": "Wakizashi_3P_Draw",
+    "duration": 3.0833,
+    "end": 93,
+    "reference": "25.2-28.3s; redraw after teleport",
+    "events": [
+      [
+        "sword_reappear",
+        0.45
+      ]
+    ],
+    "max_reach_adjustment": 0.14688206184114405,
+    "sword_action": "Wakizashi_Draw_R_NormalGrip",
+    "kunai_action": "Wakizashi_Draw_Kunai",
+    "fbx": "Wakizashi_3P_Draw.fbx",
+    "left_sword_action": "Wakizashi_Draw_L_NormalGrip"
+  },
+  {
+    "name": "Ryunochi",
+    "action": "Wakizashi_3P_Ryunochi",
+    "duration": 3.75,
+    "end": 113,
+    "reference": "33.0-37.5s; variable airborne hold",
+    "events": [
+      [
+        "jump",
+        2.54167
+      ],
+      [
+        "air_hold",
+        2.54167
+      ],
+      [
+        "land",
+        2.91667
+      ],
+      [
+        "dragon_effect",
+        2.91667
+      ]
+    ],
+    "max_reach_adjustment": 0.14688211531581763,
+    "sword_action": "Wakizashi_Ryunochi_R_NormalGrip",
+    "kunai_action": "Wakizashi_Ryunochi_Kunai",
+    "fbx": "Wakizashi_3P_Ryunochi.fbx",
+    "left_sword_action": "Wakizashi_Ryunochi_L_NormalGrip"
+  }
+]

@@ -1,0 +1,19 @@
+00:01.109  blend            | Read blend: "C:\Users\29\Desktop\3y\Gukgung_3P.blend"
+C:\Users\29\Desktop\3y\GameIntegration\blender\export_bundle.py:91: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\Users\29\Desktop\3y\GameIntegration\blender\export_bundle.py:107: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+Info: Baking map saved to internal image, save it externally or pack it
+
+FBX export starting... 'C:/Users/29/Desktop/3y/OVDR_Import/rig_korea_full.fbx'
+(bpy.data.armatures['Armature'], 'POSE')
+export finished in 0.1426 sec.
+BUNDLE_JSON {"file": "C:/Users/29/Desktop/3y/OVDR_Import/rig_korea_full.fbx", "bytes": 913356, "mesh": "Gukgung3P", "texture": "C:/Users/29/Desktop/3y/OVDR_Import/rig_korea_full_BaseColor.png", "actions_kept": ["Gukgung_3P_DrawRelease", "Gukgung_3P_HorizontalAttack"], "actions_dropped": 9, "weapons": [{"as": "Gukgung_Bow", "bone": "LeftHand", "verts": 1579}, {"as": "Gukgung_String", "bone": "LeftHand", "verts": 264}, {"as": "Gukgung_Arrow", "bone": "RightHand", "verts": 156}]}
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

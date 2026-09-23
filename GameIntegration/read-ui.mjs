@@ -1,0 +1,1 @@
+import fs from 'node:fs';const x=JSON.parse(fs.readFileSync('GameIntegration/ui-recheck.json','utf8'));let d=JSON.parse(x.content[0].text); console.log(JSON.stringify(d).slice(0,2500));fs.writeFileSync('GameIntegration/ui-flat.json',JSON.stringify(d,null,2));

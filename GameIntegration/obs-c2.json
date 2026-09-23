@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"instances\": {\n    \"status\": \"error\",\n    \"error\": \"No instance at path \\\"Players\\\" is in the running Workspace, so there is nothing to search under it. Paths are dot-separated and start below Workspace, as the path field of every listed instance gives them.\"\n  },\n  \"outcome\": \"partial\",\n  \"failedSections\": [\n    \"instances\"\n  ]\n}"
+    }
+  ]
+}

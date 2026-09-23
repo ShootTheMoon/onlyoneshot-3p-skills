@@ -1,0 +1,46 @@
+{
+  "Idle": {
+    "min_thumb_blade_dot": 0.9999998807907104,
+    "max_grip_center_error_m": 5.568031785349065e-07
+  },
+  "Attack1": {
+    "min_thumb_blade_dot": 0.9999998789280653,
+    "max_grip_center_error_m": 1.2453841035605615e-06
+  },
+  "Attack2": {
+    "min_thumb_blade_dot": 0.999999875202775,
+    "max_grip_center_error_m": 6.155753374627462e-07
+  },
+  "Attack3": {
+    "min_thumb_blade_dot": 0.9999999068677425,
+    "max_grip_center_error_m": 1.1234329238516548e-06
+  },
+  "BlockIn": {
+    "min_thumb_blade_dot": 0.9999999068677425,
+    "max_grip_center_error_m": 5.962326831740902e-07
+  },
+  "BlockHold": {
+    "min_thumb_blade_dot": 0.9999999552965164,
+    "max_grip_center_error_m": 7.566283781672228e-07
+  },
+  "BlockOut": {
+    "min_thumb_blade_dot": 0.9999999478459358,
+    "max_grip_center_error_m": 8.706107837026844e-07
+  },
+  "KunaiThrow": {
+    "min_thumb_blade_dot": 0.9999999180436134,
+    "max_grip_center_error_m": 6.188917057900186e-07
+  },
+  "Teleport": {
+    "min_thumb_blade_dot": 0.9999999180436134,
+    "max_grip_center_error_m": 4.04532908216066e-07
+  },
+  "Draw": {
+    "min_thumb_blade_dot": 0.999999888241291,
+    "max_grip_center_error_m": 1.288153458484182e-06
+  },
+  "Ryunochi": {
+    "min_thumb_blade_dot": 0.9999998691491783,
+    "max_grip_center_error_m": 1.1963925085430714e-06
+  }
+}

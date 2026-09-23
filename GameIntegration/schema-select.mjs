@@ -1,0 +1,1 @@
+import fs from 'node:fs';const x=JSON.parse(fs.readFileSync('GameIntegration/tool-schemas.json','utf8'));console.log(x.tools.filter(t=>/exec|eval|delete|log|play|stop/.test(t.name)).map(t=>({name:t.name,description:t.description?.slice(0,140),inputSchema:t.inputSchema})));

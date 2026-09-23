@@ -1,0 +1,22 @@
+{
+  "BowVertical": {
+    "fbx": {
+      "max_error_m": 2.6941299438476562e-05,
+      "pass": true
+    },
+    "glb": {
+      "max_error_m": 3.3974647521972656e-06,
+      "pass": true
+    }
+  },
+  "BowHorizontal": {
+    "fbx": {
+      "max_error_m": 2.0384788513183594e-05,
+      "pass": true
+    },
+    "glb": {
+      "max_error_m": 3.039836883544922e-06,
+      "pass": true
+    }
+  }
+}

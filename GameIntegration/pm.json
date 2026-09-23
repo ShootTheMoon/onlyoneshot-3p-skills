@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"instances\": {\n    \"status\": \"ok\",\n    \"data\": {\n      \"success\": true,\n      \"clientId\": \"a0df79c9-4978-5b6c-8ce8-e1a99bf3e2fe\",\n      \"world\": \"client\",\n      \"worldNote\": \"Read from the client world the input tools drive. Server-side rules and collision are judged on the authority world, which can hold a different value for the same instance while replication is in flight.\",\n      \"requested\": 2,\n      \"found\": 2,\n      \"instances\": [\n        {\n          \"query\": \"Seungpyo1007\",\n          \"status\": \"ok\",\n          \"path\": \"Seungpyo1007\",\n          \"class\": \"Model\",\n          \"name\": \"Seungpyo1007\"\n        },\n        {\n          \"query\": \"Seungpyo1007.Torso\",\n          \"status\": \"ok\",\n          \"path\": \"Seungpyo1007.Torso\",\n          \"class\": \"MeshPart\",\n          \"name\": \"Torso\",\n          \"Size\": {\n            \"ObjectType\": \"Vector3\",\n            \"X\": 20.09918212890625,\n            \"Y\": 53.988487243652344,\n            \"Z\": 26.83523941040039\n          },\n          \"Transparency\": 1\n        }\n      ]\n    }\n  },\n  \"outcome\": \"ok\"\n}"
+    }
+  ]
+}

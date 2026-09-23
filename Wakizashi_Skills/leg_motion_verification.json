@@ -1,0 +1,46 @@
+{
+  "Idle": {
+    "max_added_foot_movement_m": 0.0,
+    "max_leg_overreach_m": 0
+  },
+  "Attack1": {
+    "max_added_foot_movement_m": 0.0934077110691341,
+    "max_leg_overreach_m": 0
+  },
+  "Attack2": {
+    "max_added_foot_movement_m": 0.0934077110691341,
+    "max_leg_overreach_m": 0
+  },
+  "Attack3": {
+    "max_added_foot_movement_m": 0.09340772103964419,
+    "max_leg_overreach_m": 0
+  },
+  "BlockIn": {
+    "max_added_foot_movement_m": 0.031764764694531565,
+    "max_leg_overreach_m": 0
+  },
+  "BlockHold": {
+    "max_added_foot_movement_m": 0.031764764694531565,
+    "max_leg_overreach_m": 0
+  },
+  "BlockOut": {
+    "max_added_foot_movement_m": 0.031764764694531565,
+    "max_leg_overreach_m": 0
+  },
+  "KunaiThrow": {
+    "max_added_foot_movement_m": 0.07158911230155064,
+    "max_leg_overreach_m": 0
+  },
+  "Teleport": {
+    "max_added_foot_movement_m": 0.06041523780611245,
+    "max_leg_overreach_m": 0
+  },
+  "Draw": {
+    "max_added_foot_movement_m": 0.07158911230155064,
+    "max_leg_overreach_m": 0
+  },
+  "Ryunochi": {
+    "max_added_foot_movement_m": 0.06946221960669564,
+    "max_leg_overreach_m": 0
+  }
+}

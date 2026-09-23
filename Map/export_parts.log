@@ -1,0 +1,37 @@
+00:08.109  blend            | Read blend: "C:\Users\29\Desktop\3y\Map\PreviewStage.blend"
+C:\Users\29\Desktop\3y\Map\export_parts.py:73: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  am = bpy.data.materials.new('M_' + gname); am.use_nodes = True
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+Info: Baking map saved to internal image, save it externally or pack it
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_ground_overdare.fbx'
+export finished in 0.0115 sec.
+[parts] stage_ground: 22 objs, 4528 tris, center (-0.03, -0.0, -0.2)  (1s)
+Info: Baking map saved to internal image, save it externally or pack it
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_fence_overdare.fbx'
+export finished in 0.0201 sec.
+[parts] stage_fence: 394 objs, 22008 tris, center (0.07, 4.7, 0.86)  (2s)
+Info: Baking map saved to internal image, save it externally or pack it
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_gate_overdare.fbx'
+export finished in 0.0055 sec.
+[parts] stage_gate: 66 objs, 3482 tris, center (0.0, 5.6, 2.17)  (3s)
+Info: Baking map saved to internal image, save it externally or pack it
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_trees_overdare.fbx'
+export finished in 0.0126 sec.
+[parts] stage_trees: 48 objs, 5344 tris, center (0.21, 3.51, 1.78)  (4s)
+Info: Baking map saved to internal image, save it externally or pack it
+
+FBX export starting... 'C:\\Users\\29\\Desktop\\3y\\OVDR_Import\\parts\\stage_props_overdare.fbx'
+export finished in 0.0056 sec.
+[parts] stage_props: 57 objs, 2836 tris, center (0.07, 3.16, 1.65)  (5s)
+[parts] done [('stage_ground', 4528), ('stage_fence', 22008), ('stage_gate', 3482), ('stage_trees', 5344), ('stage_props', 2836)]
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,223 @@
+너는 Blender MCP가 연결된 3D 에이전트다. 질문하지 말고 바로 작업해라.
+목표: 1인칭 와키자시 뷰모델을 Mixamo 3인칭 캐릭터 양손에 붙인 3인칭 무기 세트를 만들고, OVERDARE용 FBX로 뽑는다.
+
+==================================================
+0) 환경 (이미 열려 있음)
+==================================================
+- OS: Windows
+- 작업 폴더: C:\Users\29\Desktop\3y
+- Blender: 5.2.1 LTS, Blender MCP addon 연결됨 (execute_blender_code / get_scene_info / get_object_info / get_viewport_screenshot / export_scene)
+- 지금 열린 파일: C:\Users\29\Desktop\3y\Wakizashi_3P.blend
+  → 뷰모델 + Mixamo가 이미 같은 씬에 임포트된 작업용 복사본이다.
+- 원본은 절대 저장/덮어쓰지 마라:
+  - C:\Users\29\Desktop\3y\Wakizashi Viewmodel v2.blend
+  - C:\Users\29\Desktop\3y\Mixamo_For_OVDR.fbx
+- 모든 저장은 Wakizashi_3P.blend 만.
+
+Blender MCP 규칙:
+- 코드는 작은 덩어리로 나눠 실행.
+- 모든 blender 툴 호출에 user_prompt는 아래 문장을 그대로 넣어라 (의역 금지):
+  "1인칭 와키자시를 Mixamo 3인칭 캐릭터 양손에 붙여 3인칭 무기를 만들고 OVERDARE용 FBX로 내보내라"
+- 한 단계 끝날 때마다 get_viewport_screenshot으로 확인하고 다음으로 가라.
+- 뷰모델 원본을 bpy.ops.wm.save_mainfile() 로 저장하지 마라. filepath가 Wakizashi_3P.blend 인지 매번 확인.
+
+==================================================
+1) 이미 조사된 사실 (다시 추측하지 말고 이걸 써라)
+==================================================
+
+[소스 A] 1인칭 뷰모델 (이미 씬에 있음)
+- FakeFPSCamera (CAMERA)
+- ViewmodelRig (ARMATURE, 숨김) 본:
+  Root → RightUpperArm → RightLowerArm → RightHand → RightItem
+       → LeftUpperArm  → LeftLowerArm  → LeftHand  → LeftItem
+- Left_Arm_Mesh / Right_Arm_Mesh : ViewmodelRig 자식. 3인칭에선 숨기거나 삭제.
+- Kunai : 숨김. 이번 작업 대상 아님. 그대로 숨김 유지.
+- Wakizashi_Blade_L
+    parent_type=BONE, parent_bone=LeftItem
+    mesh=WPN_Wakizashi_A__sword_metal.001
+    verts=6980, tris=11555
+- Wakizashi_Blade_R
+    parent_type=BONE, parent_bone=RightItem
+    mesh=WPN_Wakizashi_A__sword_metal
+    verts=6980, tris=11555
+- 로컬 메시 좌표 (양쪽 동일, 이게 rest 에셋이다):
+    local_min = (-0.0125, -0.0370, 0.0091)
+    local_max = ( 0.0125,  0.2978, 0.0406)
+    날 길이축 = 로컬 +Y (손잡이 Y≈-0.037, 칼끝 Y≈0.298)
+    전체 길이 ≈ 0.335 m (와키자시 실측 범위)
+- 오브젝트 loc/rot/scale 은 1인칭 포즈용이다. 3인칭 rest 에셋으로 쓸 때 이 트랜스폼을 적용하지 마라.
+  올바른 방법: duplicate → parent 제거(keep transform 끄기) → loc=0, rot=0, scale=1 로 리셋.
+  그러면 메시 로컬 좌표 그대로 칼이 +Y로 서 있는 rest 무기가 된다.
+- 머티리얼 슬롯 7개 (양쪽 공유 이름):
+    0 M_Wakizashi_sword_metal.001
+    1 M_Wakizashi_Material_001.001
+    2 M_Wakizashi_Material_007.001
+    3 M_Wakizashi_Material_009.001
+    4 M_Wakizashi_black_metal.001
+    5 M_Wakizashi_brass.001
+    6 M_Wakizashi_sword_hamon_edge.001
+- 버텍스 그룹 없음. 모디파이어 없음. 본 웨이트가 아니라 Bone Parent로 붙어 있다.
+
+[소스 B] Mixamo 3인칭 캐릭터 (이미 씬에 있음, Mixamo_For_OVDR.fbx)
+- Armature 오브젝트 scale = (0.01, 0.01, 0.01)  ← cm→m. 절대 Apply Scale 하지 마라 (애니메이션/OVDR 리그 깨짐).
+- 캐릭터 월드 크기 ≈ X 1.59, Y 0.42, Z 1.58 m (T포즈, 키 ~1.58m)
+- 메시: Head_Geo, Torso_Geo, LeftArm_Geo, RightArm_Geo, LeftLeg_Geo, RightLeg_Geo
+- 본 이름 (Mixamo / OVDR 스키마, 뷰모델 팔 본과 이름이 같음):
+    Root
+    LowerTorso → UpperTorso01 → UpperTorso02 → Head → Head_Nub
+                                      ├ RightUpperArm → RightLowerArm → RightHand → RightHand001
+                                      └ LeftUpperArm  → LeftLowerArm  → LeftHand  → LeftHand001
+    LowerTorso → LeftUpperLeg → LeftLowerLeg → LeftFoot → LeftFoot_Nub
+               → RightUpperLeg → RightLowerLeg → RightFoot → RightFoot_Nub
+- 뷰모델에 있던 RightItem / LeftItem 본은 Mixamo에 없다.
+- RightHand / LeftHand 는 리프 본이고 월드 길이가 ≈ 0.0001 m (사실상 점).
+  그래서 무기 정렬은 bone.tail이 아니라 pose.bones["RightHand"].matrix 를 써라.
+- T포즈에서 pose.matrix 월드 변환 (Armature.matrix_world @ pose_bone.matrix):
+    RightHand translation ≈ (-0.600, 0.013, 1.128)
+    LeftHand  translation ≈ ( 0.600, 0.013, 1.128)
+  손 높이는 어깨 높이(T포즈). bone.head_local*0.01 값(-0.36, -0.04, 0.75)은 쓰지 마라. 그건 rest head이고 실제 손 위치가 아니다.
+- 손 본 3x3 에는 Armature scale 0.01 이 이미 곱해져 있다.
+  자식을 parent_type=BONE 으로 붙이면 칼도 100배 작아진다.
+  대응: 칼 오브젝트 scale = (100, 100, 100) 으로 상쇄. (Armature에 Apply Scale 금지)
+
+==================================================
+2) 만들 것
+==================================================
+듀얼 와키자시 3인칭 세트.
+
+이름:
+- Wakizashi_3P_R   ← Armature / RightHand 에 Bone Parent
+- Wakizashi_3P_L   ← Armature / LeftHand  에 Bone Parent
+
+Grip 규칙 (검도/닌자 3인칭 표준):
+- 손잡이(tsuka, 로컬 Y 음수쪽)가 손 안에 있고
+- 날(blade, 로컬 +Y)이 손등 바깥/전방으로 나가게
+- 가드(tsuba)가 손 바로 앞에 보이게
+- 칼등이 위, 날이 아래(월드 -Z 쪽이 날). 와키자시 단면은 Z가 두께축, 얇은 쪽이 날.
+- 1인칭 뷰모델의 “카메라 앞 포즈”를 복사하지 마라. T포즈 손에서 자연스럽게 쥐어진 상태여야 한다.
+- 양손 대칭. L은 R을 X미러가 아니라 같은 그립을 왼손 본 공간에 맞춰 따로 정렬.
+
+스케일:
+- 칼 실길이 0.33~0.36 m 유지 (캐릭터 키 1.58 m 대비 와키자시 비율).
+- Armature 0.01 스케일 상쇄 후 월드에서 dimensions.y(또는 최장축) ≈ 0.33~0.36 인지 수치로 검증.
+
+오버레이:
+- 1인칭용 ViewmodelRig, Left_Arm_Mesh, Right_Arm_Mesh, FakeFPSCamera, Kunai, Wakizashi_Blade_L, Wakizashi_Blade_R 는 3인칭 결과에서 숨긴다 (삭제 가능하지만 원본 메시 데이터는 남겨도 됨).
+- Mixamo 바디 메시는 그대로 둔다. 머티리얼 "12 - Default" 건드리지 마라.
+
+==================================================
+3) 작업 순서 (이 순서 그대로)
+==================================================
+
+STEP A. 안전
+- bpy.data.filepath 가 Wakizashi_3P.blend 인지 확인. 아니면 그 파일로 저장/오픈.
+- 원본 두 파일은 읽기만.
+
+STEP B. rest 칼 만들기
+1. Wakizashi_Blade_R 를 오브젝트 duplicate.
+2. 이름을 Wakizashi_3P_R 로.
+3. parent 제거. keep_transform=False.
+4. location=(0,0,0), rotation_euler=(0,0,0), scale=(1,1,1)
+5. 원점을 손잡이 그립 중심으로 이동:
+   - 메시 로컬에서 손잡이는 Y≈-0.037 ~ 0.02, 단면 중심 X=0, Z≈0.025
+   - origin을 (0.0, 0.00, 0.025) 근처 그립 중심으로 옮겨라. 칼끝은 +Y에 남아야 한다.
+6. 같은 방식으로 Wakizashi_Blade_L duplicate → Wakizashi_3P_L (또는 R을 copy).
+   메시 데이터는 복제해도 되고 공유해도 됨. 머티리얼 슬롯 7개 유지.
+7. 이 단계 월드에서 칼 길이 ≈ 0.335 m 인지 print로 확인.
+
+STEP C. 손 본에 붙이기 (스케일 상쇄 필수)
+1. Wakizashi_3P_R:
+   - parent = Armature
+   - parent_type = 'BONE'
+   - parent_bone = 'RightHand'
+   - scale = (100, 100, 100)   # Armature 0.01 상쇄
+2. Wakizashi_3P_L: 동일, parent_bone='LeftHand', scale=(100,100,100)
+3. 붙인 직후 월드 dimensions 최장축이 ~0.33m 인지 확인. 0.003m 이면 scale 상쇄 실패한 것. 0.33*100=33m 이면 상쇄를 두 번 한 것.
+
+STEP D. 그립 정렬 (핵심, 스크린샷으로 반복)
+Bone Parent 후 자식의 location/rotation은 본 공간이므로 여기서 돌려라.
+
+시작 추정치 (T포즈, 손 본 축이 Mixamo FBX라 축이 비뚤어져 있음. 추정치일 뿐, 스크린샷 보고 수정):
+- 목표 월드:
+  - 칼 길이축이 팔 방향(어깨→손 바깥, 대략 월드 ±X)이 아니라, T포즈에서는 손에서 앞(+Y 또는 캐릭터가 바라보는 방향)이 아니라
+    **칼이 손에서 바닥과 평행하게 바깥/전방으로 나가되, 캐릭터 옆구리에 베이지 않게**.
+  - T포즈 기본 휴대: 날이 바깥(±X) 또는 앞(-Y, Mixamo는 보통 캐릭터가 -Y 또는 +Y를 봄)으로.
+  - OVERDARE/Mixamo 캐릭터는 보통 전방이 -Y 또는 +Y. 씬에서 Armature가 어디를 보는지 확인하고, 칼끝이 **캐릭터 전방**을 향하게 하는 휴대 포즈로 맞춰라.
+  - 더 자연스러운 3인칭 전투 휴대(권장): T포즈에서 칼이 손 아래로 약 20~40도, 날이 아래, 칼끝이 전방.
+- RightHand 본 길이가 0이라 bone.tail 정렬은 불가능. 아래 방법으로 맞춰라:
+  a) 칼의 월드 바운딩과 손 월드 위치(-0.600, 0.013, 1.128)를 출력
+  b) 손잡이 중심이 손 위치에 오도록 location 오프셋
+  c) 칼끝이 손에서 15~25cm 나가 있는지 확인
+  d) get_viewport_screenshot, 카메라 정면/측면/탑 세 장
+  e) 손 메시(RightArm_Geo의 손목) 안에 손잡이가 박혀 있는지 육안 확인
+  f) 안 맞으면 rotation_euler를 15도 단위로 수정 후 다시 샷
+- 왼손도 대칭으로. 두 칼이 몸통을 관통하면 실패.
+
+카메라 프레이밍:
+- 캐릭터 전신이 보이게 view_all
+- 그다음 손목 클로즈업
+- 정면, 오른쪽 45도, 탑다운 각 1장씩 남기고 통과 판정.
+
+통과 기준:
+- 손잡이가 손가락 메쉬 안에 있다
+- 칼날이 팔/머리/몸통을 뚫지 않는다
+- 양쪽 길이 동일
+- 1인칭 팔(Left_Arm_Mesh, Right_Arm_Mesh) 이 3인칭 샷에 안 보인다
+
+STEP E. 정리
+- 컬렉션 만들기:
+  - COL_Viewmodel (1인칭 잔재, hide_viewport/hide_render True): FakeFPSCamera, ViewmodelRig, Left_Arm_Mesh, Right_Arm_Mesh, Kunai, Wakizashi_Blade_L, Wakizashi_Blade_R
+  - COL_Character: Armature + *_Geo
+  - COL_Weapon3P: Wakizashi_3P_R, Wakizashi_3P_L
+- Armature rest pose 유지. 키프레임 넣지 마라.
+- 씬 유닛: METRIC, scale_length=1.0, fps=30 유지.
+
+STEP F. 저장 + 내보내기
+1. bpy.ops.wm.save_mainfile()  (경로가 Wakizashi_3P.blend 일 때만)
+2. OVERDARE용 FBX:
+   경로: C:\Users\29\Desktop\3y\Wakizashi_3P_For_OVDR.fbx
+   포함: Armature, 6개 *_Geo, Wakizashi_3P_R, Wakizashi_3P_L
+   제외: 뷰모델 전부
+   설정:
+   - apply_scale_options='FBX_SCALE_ALL' 또는 오브젝트 스케일은 유지하되 Armature 0.01을 깨지 말 것
+   - add_leaf_bones=False
+   - bake_space_transform=False
+   - use_custom_props=True
+   - armature_nodetype='NULL'
+   - axis_forward='-Z', axis_up='Y'  (Mixamo_For_OVDR.fbx 와 동일하게. 다르면 Mixamo 원본 임포트 설정에 맞춰라)
+3. 무기만 따로도 뽑기:
+   C:\Users\29\Desktop\3y\Wakizashi_3P_WeaponsOnly.fbx
+   오브젝트: Wakizashi_3P_R, Wakizashi_3P_L
+   (본에 페어런트된 상태 유지해서 가져가면 엔진에서 손 본 이름으로 재부착 가능)
+4. 추가로 GLB도:
+   blender export_scene → C:\Users\29\Desktop\3y\Wakizashi_3P.glb
+   object_names = Mixamo 바디 + 두 칼 + Armature
+
+STEP G. OVERDARE 트라이 예산
+- 칼 하나 tris=11555, 두 자루=23110. 캐릭터는 저폴리. 메시당 30,000 한도 OK. decimate 하지 마라 (날이 뭉개짐).
+- 텍스처 새로 베이크하지 마라. 기존 머티리얼 유지.
+- 폴리곤을 줄여야 하면 칼당 8k 이하만, 날/하몬 실루엣 보존.
+
+==================================================
+4) 금지
+==================================================
+- Wakizashi Viewmodel v2.blend 덮어쓰기
+- Mixamo_For_OVDR.fbx 덮어쓰기
+- Armature Apply Scale / Apply Rotation
+- RightHand 본 길이 리사이즈 (OVDR 리그 깨짐)
+- Hyper3D/Hunyuan으로 칼 재생성 (이미 고퀄 메시가 있다)
+- Sketchfab에서 다른 칼 다운
+- 1인칭 팔 메쉬를 3인칭 캐릭터에 스키닝
+- 칼 월드 스케일을 캐릭터 키에 맞춰 2~3m짜리 대도로 키우기 (와키자시다)
+
+==================================================
+5) 완료 리포트 형식
+==================================================
+끝나면 이 항목만 짧게:
+- 저장 경로
+- FBX/GLB 경로
+- 각 칼 월드 길이, 손 위치, parent_bone
+- 스크린샷 3장에서 그립이 왜 통과인지 한 줄
+- 실패한 게 있으면 수치와 함께
+
+지금 STEP A부터 실행해라.

@@ -1,0 +1,1 @@
+[{"name":"overdare_observe","arguments":{"character":true,"instances":{"namePattern":"Torso|Head|LeftArm|RightArm"},"fields":["Name","ClassName","Transparency","Position"]},"output":"C:/Users/29/Desktop/3y/GameIntegration/obs-c.json"}]

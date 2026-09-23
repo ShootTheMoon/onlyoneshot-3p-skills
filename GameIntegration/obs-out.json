@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"instances\": {\n    \"status\": \"ok\",\n    \"data\": {\n      \"success\": true,\n      \"clientId\": \"ce3d0c6c-45b9-9636-4849-d9832de61af5\",\n      \"world\": \"client\",\n      \"worldNote\": \"Read from the client world the input tools drive. Server-side rules and collision are judged on the authority world, which can hold a different value for the same instance while replication is in flight.\",\n      \"searched\": \"wholeWorld\",\n      \"namePattern\": \"LocalSkillPreview\",\n      \"matchCount\": 0,\n      \"instances\": []\n    }\n  },\n  \"outcome\": \"ok\"\n}"
+    }
+  ]
+}

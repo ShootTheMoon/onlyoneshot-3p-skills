@@ -1,0 +1,79 @@
+{
+  "Idle": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 0.09691328732904647,
+    "sample_step_frames": 1
+  },
+  "Attack1": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 12.6139131044568,
+    "sample_step_frames": 1
+  },
+  "Attack2": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 12.197715527382075,
+    "sample_step_frames": 1
+  },
+  "Attack3": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 23.49236393327257,
+    "sample_step_frames": 1
+  },
+  "BlockIn": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 0,
+    "sample_step_frames": 1
+  },
+  "BlockHold": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 0,
+    "sample_step_frames": 1
+  },
+  "BlockOut": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 0,
+    "sample_step_frames": 1
+  },
+  "KunaiThrow": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 4.5614073678437315,
+    "sample_step_frames": 1
+  },
+  "Teleport": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 12.809251392077288,
+    "sample_step_frames": 1
+  },
+  "Draw": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 11.314560114868378,
+    "sample_step_frames": 1
+  },
+  "Ryunochi": {
+    "collision_count": 0,
+    "pairs": {},
+    "first_collisions": [],
+    "max_forearm_delta_deg": 25.055763498437226,
+    "sample_step_frames": 1
+  }
+}

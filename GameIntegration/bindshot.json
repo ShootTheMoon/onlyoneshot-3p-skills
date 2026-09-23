@@ -1,0 +1,4 @@
+[{"name":"overdare_stop","arguments":{}},
+ {"name":"overdare_move_instance","arguments":{"guid":"54E32FDD4EA3C37CA1D8F78BF9C5B2F8","newParent":"Workspace"}},
+ {"name":"overdare_camera","arguments":{"focus":"54E32FDD4EA3C37CA1D8F78BF9C5B2F8"}},
+ {"name":"overdare_screenshot","arguments":{"includeGui":false},"output":"C:/Users/29/Desktop/3y/GameIntegration/screen.json"}]

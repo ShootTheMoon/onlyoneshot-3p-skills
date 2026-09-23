@@ -1,0 +1,57 @@
+{
+  "Idle": {
+    "max_weapon_matrix_error": 5.960464477539062e-07,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 5.9650469694361163e-05
+  },
+  "Attack1": {
+    "max_weapon_matrix_error": 3.844499588012695e-06,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 0.00019625425309754974
+  },
+  "Attack2": {
+    "max_weapon_matrix_error": 7.320195436477661e-07,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 5.9650469694361163e-05
+  },
+  "Attack3": {
+    "max_weapon_matrix_error": 2.942979335784912e-06,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 0.00017257596209674375
+  },
+  "BlockIn": {
+    "max_weapon_matrix_error": 2.5257468223571777e-06,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 0.00017257596209674375
+  },
+  "BlockHold": {
+    "max_weapon_matrix_error": 2.421438694000244e-06,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 4.963255702250535e-05
+  },
+  "BlockOut": {
+    "max_weapon_matrix_error": 2.6971101760864258e-06,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 0.00017257596209674375
+  },
+  "KunaiThrow": {
+    "max_weapon_matrix_error": 3.257300704717636e-06,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 0.0001452552054104217
+  },
+  "Teleport": {
+    "max_weapon_matrix_error": 4.172325134277344e-07,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 0.00011793444872409964
+  },
+  "Draw": {
+    "max_weapon_matrix_error": 2.637214493006468e-06,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 0.0002099146314264999
+  },
+  "Ryunochi": {
+    "max_weapon_matrix_error": 1.9669532775878906e-06,
+    "max_arm_matrix_error": 0,
+    "max_hand_180_error_deg": 0.0001998967187546441
+  }
+}

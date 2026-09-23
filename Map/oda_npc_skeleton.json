@@ -1,0 +1,2831 @@
+{
+ "InstanceType": "Skeleton",
+ "ActorGuid": "612908EF45E6FBB1E96C43B78F8E5726",
+ "ObjectKey": 10267,
+ "Archivable": true,
+ "Name": "Skeleton",
+ "bDisableAdaptiveNetUpdateFrequency": false,
+ "Mobility": "Movable",
+ "WorldTransform": {
+  "Translation": {
+   "ObjectType": "Vector3",
+   "X": 0,
+   "Y": 11525,
+   "Z": 0
+  },
+  "Rotation": {
+   "ObjectType": "Vector3",
+   "X": 0,
+   "Y": -90,
+   "Z": 0
+  },
+  "Scale": {
+   "ObjectType": "Vector3",
+   "X": 1,
+   "Y": 1,
+   "Z": 1
+  }
+ },
+ "PivotOffsetCFrame": {
+  "ObjectType": "CFrame",
+  "Position": {
+   "ObjectType": "Vector3",
+   "X": 0,
+   "Y": 0,
+   "Z": 0
+  },
+  "Orientation": {
+   "ObjectType": "Vector3",
+   "X": 0,
+   "Y": 0,
+   "Z": 0
+  }
+ },
+ "RootBone": {
+  "Value": 10268,
+  "Type": "ObjectKey"
+ },
+ "SkeletonId": "CharacterSkeleton",
+ "LuaChildren": [
+  {
+   "InstanceType": "Bone",
+   "ActorGuid": "35A6CA7148BF3C11C05194A7C709CEE9",
+   "ObjectKey": 10268,
+   "Archivable": true,
+   "Name": "Root",
+   "bDisableAdaptiveNetUpdateFrequency": false,
+   "Mobility": "Movable",
+   "WorldTransform": {
+    "Translation": {
+     "ObjectType": "Vector3",
+     "X": 0,
+     "Y": 11525,
+     "Z": 0
+    },
+    "Rotation": {
+     "ObjectType": "Vector3",
+     "X": 0,
+     "Y": -90,
+     "Z": 0
+    },
+    "Scale": {
+     "ObjectType": "Vector3",
+     "X": 1,
+     "Y": 1,
+     "Z": 1
+    }
+   },
+   "CFrame": {
+    "ObjectType": "CFrame",
+    "Position": {
+     "ObjectType": "Vector3",
+     "X": 0,
+     "Y": 0,
+     "Z": 0
+    },
+    "Orientation": {
+     "ObjectType": "Vector3",
+     "X": 0,
+     "Y": 0,
+     "Z": 0
+    }
+   },
+   "WorldCFrame": {
+    "ObjectType": "CFrame",
+    "Position": {
+     "ObjectType": "Vector3",
+     "X": 0,
+     "Y": 11525,
+     "Z": 0
+    },
+    "Orientation": {
+     "ObjectType": "Vector3",
+     "X": 0,
+     "Y": -90,
+     "Z": 0
+    }
+   },
+   "Axis": {
+    "ObjectType": "Vector3",
+    "X": 0,
+    "Y": 0,
+    "Z": -1
+   },
+   "SecondaryAxis": {
+    "ObjectType": "Vector3",
+    "X": 1,
+    "Y": 0,
+    "Z": 0
+   },
+   "WorldAxis": {
+    "ObjectType": "Vector3",
+    "X": 1,
+    "Y": 0,
+    "Z": -1.2167965302012362e-08
+   },
+   "WorldSecondaryAxis": {
+    "ObjectType": "Vector3",
+    "X": 1.2167965302012362e-08,
+    "Y": 0,
+    "Z": 1
+   },
+   "Transform": {
+    "ObjectType": "CFrame",
+    "Position": {
+     "ObjectType": "Vector3",
+     "X": 0,
+     "Y": 0,
+     "Z": 0
+    },
+    "Orientation": {
+     "ObjectType": "Vector3",
+     "X": 0,
+     "Y": 0,
+     "Z": 0
+    }
+   },
+   "LuaChildren": [
+    {
+     "InstanceType": "Bone",
+     "ActorGuid": "5E8682764B3B07AB387E7FB2B08CB57A",
+     "ObjectKey": 10269,
+     "Archivable": true,
+     "Name": "ThirdPersonCamera",
+     "bDisableAdaptiveNetUpdateFrequency": false,
+     "Mobility": "Movable",
+     "WorldTransform": {
+      "Translation": {
+       "ObjectType": "Vector3",
+       "X": 1.3963126548333094e-06,
+       "Y": 11673.595703125,
+       "Z": -140.4998321533203
+      },
+      "Rotation": {
+       "ObjectType": "Vector3",
+       "X": -3.1805547185895103e-15,
+       "Y": -90,
+       "Z": -90
+      },
+      "Scale": {
+       "ObjectType": "Vector3",
+       "X": 1,
+       "Y": 1,
+       "Z": 1
+      }
+     },
+     "CFrame": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": -140.4998321533203,
+       "Y": 148.5956573486328,
+       "Z": -1.3963126548333094e-06
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": -90
+      }
+     },
+     "WorldCFrame": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 1.3963126548333094e-06,
+       "Y": 11673.595703125,
+       "Z": -140.4998321533203
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 3.1805547185895103e-15,
+       "Y": -90,
+       "Z": -90
+      }
+     },
+     "Axis": {
+      "ObjectType": "Vector3",
+      "X": 0,
+      "Y": 0,
+      "Z": -1
+     },
+     "SecondaryAxis": {
+      "ObjectType": "Vector3",
+      "X": 2.4335928827667885e-08,
+      "Y": -1,
+      "Z": 0
+     },
+     "WorldAxis": {
+      "ObjectType": "Vector3",
+      "X": 1,
+      "Y": 0,
+      "Z": -1.2167965302012362e-08
+     },
+     "WorldSecondaryAxis": {
+      "ObjectType": "Vector3",
+      "X": 2.9611872142338354e-16,
+      "Y": -1,
+      "Z": 2.4335928827667885e-08
+     },
+     "Transform": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      }
+     }
+    },
+    {
+     "InstanceType": "Bone",
+     "ActorGuid": "9B470CEF4ACA1C11BF3D6D8D20C0D31B",
+     "ObjectKey": 10270,
+     "Archivable": true,
+     "Name": "IKFootRoot",
+     "bDisableAdaptiveNetUpdateFrequency": false,
+     "Mobility": "Movable",
+     "WorldTransform": {
+      "Translation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 11525,
+       "Z": 0
+      },
+      "Rotation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": -90,
+       "Z": 0
+      },
+      "Scale": {
+       "ObjectType": "Vector3",
+       "X": 1,
+       "Y": 1,
+       "Z": 1
+      }
+     },
+     "CFrame": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      }
+     },
+     "WorldCFrame": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 11525,
+       "Z": 0
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": -90,
+       "Z": 0
+      }
+     },
+     "Axis": {
+      "ObjectType": "Vector3",
+      "X": 0,
+      "Y": 0,
+      "Z": -1
+     },
+     "SecondaryAxis": {
+      "ObjectType": "Vector3",
+      "X": 1,
+      "Y": 0,
+      "Z": 0
+     },
+     "WorldAxis": {
+      "ObjectType": "Vector3",
+      "X": 1,
+      "Y": 0,
+      "Z": -1.2167965302012362e-08
+     },
+     "WorldSecondaryAxis": {
+      "ObjectType": "Vector3",
+      "X": 1.2167965302012362e-08,
+      "Y": 0,
+      "Z": 1
+     },
+     "Transform": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      }
+     },
+     "LuaChildren": [
+      {
+       "InstanceType": "Bone",
+       "ActorGuid": "0E5548464403D6AC3F6424BEDEE4E49F",
+       "ObjectKey": 10271,
+       "Archivable": true,
+       "Name": "IKLeftFoot",
+       "bDisableAdaptiveNetUpdateFrequency": false,
+       "Mobility": "Movable",
+       "WorldTransform": {
+        "Translation": {
+         "ObjectType": "Vector3",
+         "X": 10.304291725158691,
+         "Y": 11542.3603515625,
+         "Z": -1.763747215270996
+        },
+        "Rotation": {
+         "ObjectType": "Vector3",
+         "X": 82.99995422363281,
+         "Y": -179.9998016357422,
+         "Z": -90.00011444091797
+        },
+        "Scale": {
+         "ObjectType": "Vector3",
+         "X": 1,
+         "Y": 1,
+         "Z": 1
+        }
+       },
+       "CFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": -1.763747215270996,
+         "Y": 17.35993766784668,
+         "Z": -10.304291725158691
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 82.99995422363281,
+         "Y": -89.99980926513672,
+         "Z": -90.00011444091797
+        }
+       },
+       "WorldCFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 10.304291725158691,
+         "Y": 11542.3603515625,
+         "Z": -1.763747215270996
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 82.99995422363281,
+         "Y": -179.9998016357422,
+         "Z": -90.00011444091797
+        }
+       },
+       "Axis": {
+        "ObjectType": "Vector3",
+        "X": 0.12187016010284424,
+        "Y": 0.992546021938324,
+        "Z": -4.08665641771222e-07
+       },
+       "SecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": 0.992546021938324,
+        "Y": -0.12187016010284424,
+        "Z": -5.289249656925676e-06
+       },
+       "WorldAxis": {
+        "ObjectType": "Vector3",
+        "X": 4.1014857288246276e-07,
+        "Y": 0.992546021938324,
+        "Z": 0.12187016010284424
+       },
+       "WorldSecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": 5.289249656925676e-06,
+        "Y": -0.12187016010284424,
+        "Z": 0.992546021938324
+       },
+       "Transform": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        }
+       }
+      },
+      {
+       "InstanceType": "Bone",
+       "ActorGuid": "BD708C8C430B2AEABD1C2B867FCF4825",
+       "ObjectKey": 10272,
+       "Archivable": true,
+       "Name": "IKRightFoot",
+       "bDisableAdaptiveNetUpdateFrequency": false,
+       "Mobility": "Movable",
+       "WorldTransform": {
+        "Translation": {
+         "ObjectType": "Vector3",
+         "X": -10.304323196411133,
+         "Y": 11542.3603515625,
+         "Z": -1.7638686895370483
+        },
+        "Rotation": {
+         "ObjectType": "Vector3",
+         "X": -82.99996185302734,
+         "Y": 0.00010611434845486656,
+         "Z": 89.99955749511719
+        },
+        "Scale": {
+         "ObjectType": "Vector3",
+         "X": 1,
+         "Y": 1,
+         "Z": 1
+        }
+       },
+       "CFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": -1.7638686895370483,
+         "Y": 17.359928131103516,
+         "Z": 10.304323196411133
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": -82.99996185302734,
+         "Y": 90.00010681152344,
+         "Z": 89.99955749511719
+        }
+       },
+       "WorldCFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": -10.304323196411133,
+         "Y": 11542.3603515625,
+         "Z": -1.7638686895370483
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": -82.99996185302734,
+         "Y": 0.00010611434845486656,
+         "Z": 89.99955749511719
+        }
+       },
+       "Axis": {
+        "ObjectType": "Vector3",
+        "X": -0.1218700259923935,
+        "Y": -0.9925460815429688,
+        "Z": 2.2422582901526766e-07
+       },
+       "SecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": -0.9925460815429688,
+        "Y": 0.1218700259923935,
+        "Z": -5.909263109060703e-06
+       },
+       "WorldAxis": {
+        "ObjectType": "Vector3",
+        "X": -2.257087459156537e-07,
+        "Y": -0.9925460815429688,
+        "Z": -0.1218700259923935
+       },
+       "WorldSecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": 5.909263109060703e-06,
+        "Y": 0.1218700259923935,
+        "Z": -0.9925460815429688
+       },
+       "Transform": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        }
+       }
+      }
+     ]
+    },
+    {
+     "InstanceType": "Bone",
+     "ActorGuid": "0EC57F7B46B71CADBF350183473AE44F",
+     "ObjectKey": 10273,
+     "Archivable": true,
+     "Name": "IKHandRoot",
+     "bDisableAdaptiveNetUpdateFrequency": false,
+     "Mobility": "Movable",
+     "WorldTransform": {
+      "Translation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 11525,
+       "Z": 0
+      },
+      "Rotation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": -90,
+       "Z": 0
+      },
+      "Scale": {
+       "ObjectType": "Vector3",
+       "X": 1,
+       "Y": 1,
+       "Z": 1
+      }
+     },
+     "CFrame": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      }
+     },
+     "WorldCFrame": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 11525,
+       "Z": 0
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": -90,
+       "Z": 0
+      }
+     },
+     "Axis": {
+      "ObjectType": "Vector3",
+      "X": 0,
+      "Y": 0,
+      "Z": -1
+     },
+     "SecondaryAxis": {
+      "ObjectType": "Vector3",
+      "X": 1,
+      "Y": 0,
+      "Z": 0
+     },
+     "WorldAxis": {
+      "ObjectType": "Vector3",
+      "X": 1,
+      "Y": 0,
+      "Z": -1.2167965302012362e-08
+     },
+     "WorldSecondaryAxis": {
+      "ObjectType": "Vector3",
+      "X": 1.2167965302012362e-08,
+      "Y": 0,
+      "Z": 1
+     },
+     "Transform": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      }
+     },
+     "LuaChildren": [
+      {
+       "InstanceType": "Bone",
+       "ActorGuid": "1BDE19F948A955E45A426BB2B21E36E9",
+       "ObjectKey": 10274,
+       "Archivable": true,
+       "Name": "IKHandGun",
+       "bDisableAdaptiveNetUpdateFrequency": false,
+       "Mobility": "Movable",
+       "WorldTransform": {
+        "Translation": {
+         "ObjectType": "Vector3",
+         "X": -35.56532287597656,
+         "Y": 11600.154296875,
+         "Z": 4.3330979347229
+        },
+        "Rotation": {
+         "ObjectType": "Vector3",
+         "X": 59.526180267333984,
+         "Y": -52.06170654296875,
+         "Z": -56.59347152709961
+        },
+        "Scale": {
+         "ObjectType": "Vector3",
+         "X": 1,
+         "Y": 1,
+         "Z": 1
+        }
+       },
+       "CFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 4.3330979347229,
+         "Y": 75.15440368652344,
+         "Z": 35.56532287597656
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 59.526180267333984,
+         "Y": 37.93829345703125,
+         "Z": -56.59347152709961
+        }
+       },
+       "WorldCFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": -35.56532287597656,
+         "Y": 11600.154296875,
+         "Z": 4.3330979347229
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 59.526180267333984,
+         "Y": -52.06170654296875,
+         "Z": -56.59347152709961
+        }
+       },
+       "Axis": {
+        "ObjectType": "Vector3",
+        "X": -0.3117988109588623,
+        "Y": 0.861860990524292,
+        "Z": -0.39997145533561707
+       },
+       "SecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": -0.008113796822726727,
+        "Y": -0.4233567714691162,
+        "Z": -0.9059267044067383
+       },
+       "WorldAxis": {
+        "ObjectType": "Vector3",
+        "X": 0.39997145533561707,
+        "Y": 0.861860990524292,
+        "Z": -0.3117988109588623
+       },
+       "WorldSecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": 0.9059267044067383,
+        "Y": -0.4233567714691162,
+        "Z": -0.008113797754049301
+       },
+       "Transform": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        }
+       },
+       "LuaChildren": [
+        {
+         "InstanceType": "Bone",
+         "ActorGuid": "54CACAE64CB7F59C49BEA19A3949EA26",
+         "ObjectKey": 10275,
+         "Archivable": true,
+         "Name": "IKLeftHand",
+         "bDisableAdaptiveNetUpdateFrequency": false,
+         "Mobility": "Movable",
+         "WorldTransform": {
+          "Translation": {
+           "ObjectType": "Vector3",
+           "X": 35.56523132324219,
+           "Y": 11600.154296875,
+           "Z": 4.333107948303223
+          },
+          "Rotation": {
+           "ObjectType": "Vector3",
+           "X": -59.52617645263672,
+           "Y": -127.93863677978516,
+           "Z": 123.4065933227539
+          },
+          "Scale": {
+           "ObjectType": "Vector3",
+           "X": 1,
+           "Y": 1,
+           "Z": 1
+          }
+         },
+         "CFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 64.43909454345703,
+           "Y": 9.88679313659668,
+           "Z": -28.450138092041016
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 6.383930206298828,
+           "Y": -133.17982482910156,
+           "Z": 165.3203582763672
+          }
+         },
+         "WorldCFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 35.56523132324219,
+           "Y": 11600.154296875,
+           "Z": 4.333107948303223
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": -59.52617645263672,
+           "Y": -127.93863677978516,
+           "Z": 123.4065933227539
+          }
+         },
+         "Axis": {
+          "ObjectType": "Vector3",
+          "X": 0.724687933921814,
+          "Y": 0.11119019985198975,
+          "Z": 0.6800471544265747
+         },
+         "SecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.6414065361022949,
+          "Y": 0.2518428862094879,
+          "Z": -0.7246880531311035
+         },
+         "WorldAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.39996960759162903,
+          "Y": -0.8618609309196472,
+          "Z": 0.3118012249469757
+         },
+         "WorldSecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.9059268236160278,
+          "Y": 0.4233565032482147,
+          "Z": 0.008118205703794956
+         },
+         "Transform": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          }
+         }
+        },
+        {
+         "InstanceType": "Bone",
+         "ActorGuid": "52CE0A6D455A21D9B5F7728E9B368F91",
+         "ObjectKey": 10276,
+         "Archivable": true,
+         "Name": "IKRightHand",
+         "bDisableAdaptiveNetUpdateFrequency": false,
+         "Mobility": "Movable",
+         "WorldTransform": {
+          "Translation": {
+           "ObjectType": "Vector3",
+           "X": -35.56532287597656,
+           "Y": 11600.154296875,
+           "Z": 4.3330979347229
+          },
+          "Rotation": {
+           "ObjectType": "Vector3",
+           "X": 59.526180267333984,
+           "Y": -52.06170654296875,
+           "Z": -56.593475341796875
+          },
+          "Scale": {
+           "ObjectType": "Vector3",
+           "X": 1,
+           "Y": 1,
+           "Z": 1
+          }
+         },
+         "CFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 1.7075475398087292e-06,
+           "Y": 1.7075474261218915e-06,
+           "Z": -1.7075473124350538e-06
+          }
+         },
+         "WorldCFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": -35.56532287597656,
+           "Y": 11600.154296875,
+           "Z": 4.3330979347229
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 59.526180267333984,
+           "Y": -52.06170654296875,
+           "Z": -56.593475341796875
+          }
+         },
+         "Axis": {
+          "ObjectType": "Vector3",
+          "X": -2.980232594040899e-08,
+          "Y": 2.980232594040899e-08,
+          "Z": -1
+         },
+         "SecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 1,
+          "Y": -2.9802322387695312e-08,
+          "Z": -2.980232594040899e-08
+         },
+         "WorldAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.3999714255332947,
+          "Y": 0.861860990524292,
+          "Z": -0.3117987811565399
+         },
+         "WorldSecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.9059267044067383,
+          "Y": -0.4233567714691162,
+          "Z": -0.008113835006952286
+         },
+         "Transform": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "InstanceType": "Bone",
+     "ActorGuid": "8BC8190C45BC9D35491201A93BF3256B",
+     "ObjectKey": 10277,
+     "Archivable": true,
+     "Name": "LowerTorso",
+     "bDisableAdaptiveNetUpdateFrequency": false,
+     "Mobility": "Movable",
+     "WorldTransform": {
+      "Translation": {
+       "ObjectType": "Vector3",
+       "X": 1.0483372389581344e-13,
+       "Y": 11593.9208984375,
+       "Z": 1.3228986972535495e-07
+      },
+      "Rotation": {
+       "ObjectType": "Vector3",
+       "X": 90,
+       "Y": -89.99996185302734,
+       "Z": 0
+      },
+      "Scale": {
+       "ObjectType": "Vector3",
+       "X": 1,
+       "Y": 1,
+       "Z": 1
+      }
+     },
+     "CFrame": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 1.3228986972535495e-07,
+       "Y": 68.92134094238281,
+       "Z": -1.1069152593221748e-13
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 89.99970245361328,
+       "Y": 8.852060773278936e-07,
+       "Z": 0.0002635092241689563
+      }
+     },
+     "WorldCFrame": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 1.1069152593221748e-13,
+       "Y": 11593.9208984375,
+       "Z": 1.3228986972535495e-07
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 90,
+       "Y": -89.99996185302734,
+       "Z": 0
+      }
+     },
+     "Axis": {
+      "ObjectType": "Vector3",
+      "X": -8.06091237054267e-14,
+      "Y": 1,
+      "Z": -5.217500074650161e-06
+     },
+     "SecondaryAxis": {
+      "ObjectType": "Vector3",
+      "X": 1,
+      "Y": 2.399582268997058e-11,
+      "Z": 4.583653662848519e-06
+     },
+     "WorldAxis": {
+      "ObjectType": "Vector3",
+      "X": 5.217500074650161e-06,
+      "Y": 1,
+      "Z": -1.4409548315837128e-13
+     },
+     "WorldSecondaryAxis": {
+      "ObjectType": "Vector3",
+      "X": -4.583653662848519e-06,
+      "Y": 2.4059308365020904e-11,
+      "Z": 1
+     },
+     "Transform": {
+      "ObjectType": "CFrame",
+      "Position": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      },
+      "Orientation": {
+       "ObjectType": "Vector3",
+       "X": 0,
+       "Y": 0,
+       "Z": 0
+      }
+     },
+     "LuaChildren": [
+      {
+       "InstanceType": "Bone",
+       "ActorGuid": "6F3D972544CD861B28A885940146C815",
+       "ObjectKey": 10278,
+       "Archivable": true,
+       "Name": "UpperTorso01",
+       "bDisableAdaptiveNetUpdateFrequency": false,
+       "Mobility": "Movable",
+       "WorldTransform": {
+        "Translation": {
+         "ObjectType": "Vector3",
+         "X": 3.3993135730270296e-05,
+         "Y": 11603.9599609375,
+         "Z": -0.0982600599527359
+        },
+        "Rotation": {
+         "ObjectType": "Vector3",
+         "X": 90,
+         "Y": -89.97041320800781,
+         "Z": 0
+        },
+        "Scale": {
+         "ObjectType": "Vector3",
+         "X": 1,
+         "Y": 1,
+         "Z": 1
+        }
+       },
+       "CFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": -0.09826019406318665,
+         "Y": 1.87117257155478e-05,
+         "Z": -10.038642883300781
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": -0.029284438118338585,
+         "Y": -8.76423655427061e-06,
+         "Z": -0.00026627277838997543
+        }
+       },
+       "WorldCFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 3.3993135730270296e-05,
+         "Y": 11603.9599609375,
+         "Z": -0.0982600599527359
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 90,
+         "Y": -89.97041320800781,
+         "Z": 0
+        }
+       },
+       "Axis": {
+        "ObjectType": "Vector3",
+        "X": 1.5296475908144203e-07,
+        "Y": -0.0005111098289489746,
+        "Z": -0.9999998807907104
+       },
+       "SecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": 1,
+        "Y": -4.647336027119309e-06,
+        "Z": 1.553400750253786e-07
+       },
+       "WorldAxis": {
+        "ObjectType": "Vector3",
+        "X": 0.0005163273308426142,
+        "Y": 0.9999998807907104,
+        "Z": 1.5530480368397548e-07
+       },
+       "WorldSecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": 6.36791384067692e-08,
+        "Y": -1.5533770181264117e-07,
+        "Z": 1
+       },
+       "Transform": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        }
+       },
+       "LuaChildren": [
+        {
+         "InstanceType": "Bone",
+         "ActorGuid": "424C98F649555284896943BF5E60C8B9",
+         "ObjectKey": 10279,
+         "Archivable": true,
+         "Name": "UpperTorso02",
+         "bDisableAdaptiveNetUpdateFrequency": false,
+         "Mobility": "Movable",
+         "WorldTransform": {
+          "Translation": {
+           "ObjectType": "Vector3",
+           "X": 4.805518256034702e-05,
+           "Y": 11616.046875,
+           "Z": -0.09788860380649567
+          },
+          "Rotation": {
+           "ObjectType": "Vector3",
+           "X": 84.67691802978516,
+           "Y": -0.0069328597746789455,
+           "Z": 89.99996185302734
+          },
+          "Scale": {
+           "ObjectType": "Vector3",
+           "X": 1,
+           "Y": 1,
+           "Z": 1
+          }
+         },
+         "CFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 0.0003695860505104065,
+           "Y": 0.006226725876331329,
+           "Z": -12.087165832519531
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 0.028811590746045113,
+           "Y": 5.323094844818115,
+           "Z": 0.00961668323725462
+          }
+         },
+         "WorldCFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 4.805518256034702e-05,
+           "Y": 11616.046875,
+           "Z": -0.09788861125707626
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 84.67691802978516,
+           "Y": -0.0069328597746789455,
+           "Z": 89.99996185302734
+          }
+         },
+         "Axis": {
+          "ObjectType": "Vector3",
+          "X": -0.09277192503213882,
+          "Y": 0.0005028570885770023,
+          "Z": -0.9956872463226318
+         },
+         "SecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.9956873655319214,
+          "Y": 0.00016784276522230357,
+          "Z": -0.09277185052633286
+         },
+         "WorldAxis": {
+          "ObjectType": "Vector3",
+          "X": 1.1225499292777386e-05,
+          "Y": 0.9956874251365662,
+          "Z": -0.09277178347110748
+         },
+         "WorldSecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": -0.00011986765457550064,
+          "Y": 0.09277178347110748,
+          "Z": 0.9956873655319214
+         },
+         "Transform": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          }
+         },
+         "LuaChildren": [
+          {
+           "InstanceType": "Bone",
+           "ActorGuid": "24D2E03346518D19E96ED1B69CC05868",
+           "ObjectKey": 10280,
+           "Archivable": true,
+           "Name": "RightUpperArm",
+           "bDisableAdaptiveNetUpdateFrequency": false,
+           "Mobility": "Movable",
+           "WorldTransform": {
+            "Translation": {
+             "ObjectType": "Vector3",
+             "X": -18.473011016845703,
+             "Y": 11636.8720703125,
+             "Z": -2.94105863571167
+            },
+            "Rotation": {
+             "ObjectType": "Vector3",
+             "X": 64.9570541381836,
+             "Y": -84.64105224609375,
+             "Z": -175.57357788085938
+            },
+            "Scale": {
+             "ObjectType": "Vector3",
+             "X": 1,
+             "Y": 1,
+             "Z": 1
+            }
+           },
+           "CFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": -0.8967499732971191,
+             "Y": 18.47340202331543,
+             "Z": -20.998443603515625
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": -24.925691604614258,
+             "Y": -2.8213047981262207,
+             "Z": 178.507568359375
+            }
+           },
+           "WorldCFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": -18.473011016845703,
+             "Y": 11636.8720703125,
+             "Z": -2.9410581588745117
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": 64.9570541381836,
+             "Y": -84.64105224609375,
+             "Z": -175.57357788085938
+            }
+           },
+           "Axis": {
+            "ObjectType": "Vector3",
+            "X": 0.04463646188378334,
+            "Y": -0.4214424788951874,
+            "Z": -0.9057559370994568
+           },
+           "SecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": -0.9979088306427002,
+            "Y": 0.023618996143341064,
+            "Z": -0.06016760692000389
+           },
+           "WorldAxis": {
+            "ObjectType": "Vector3",
+            "X": 0.4214473068714142,
+            "Y": 0.905990719795227,
+            "Z": -0.03953387588262558
+           },
+           "WorldSecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": -0.023498648777604103,
+            "Y": -0.03266965597867966,
+            "Z": -0.9991899132728577
+           },
+           "Transform": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            }
+           },
+           "LuaChildren": [
+            {
+             "InstanceType": "Bone",
+             "ActorGuid": "F34B9B174911879B5375FB903BE437B5",
+             "ObjectKey": 10281,
+             "Archivable": true,
+             "Name": "RightLowerArm",
+             "bDisableAdaptiveNetUpdateFrequency": false,
+             "Mobility": "Movable",
+             "WorldTransform": {
+              "Translation": {
+               "ObjectType": "Vector3",
+               "X": -27.296859741210938,
+               "Y": 11617.8466796875,
+               "Z": -2.072556495666504
+              },
+              "Rotation": {
+               "ObjectType": "Vector3",
+               "X": 59.452789306640625,
+               "Y": -52.17036819458008,
+               "Z": -140.1173095703125
+              },
+              "Scale": {
+               "ObjectType": "Vector3",
+               "X": 1,
+               "Y": 1,
+               "Z": 1
+              }
+             },
+             "CFrame": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": -0.03890681266784668,
+               "Y": 0.023479461669921875,
+               "Z": 20.98969268798828
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": 0.16057457029819489,
+               "Y": -15.896265029907227,
+               "Z": 6.511421203613281
+              }
+             },
+             "WorldCFrame": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": -27.296859741210938,
+               "Y": 11617.8466796875,
+               "Z": -2.072556257247925
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": 59.452789306640625,
+               "Y": -52.17036819458008,
+               "Z": -140.1173095703125
+              }
+             },
+             "Axis": {
+              "ObjectType": "Vector3",
+              "X": 0.2738954424858093,
+              "Y": 0.002802551258355379,
+              "Z": -0.9617553949356079
+             },
+             "SecondaryAxis": {
+              "ObjectType": "Vector3",
+              "X": 0.9554680585861206,
+              "Y": 0.11340082436800003,
+              "Z": 0.27243533730506897
+             },
+             "WorldAxis": {
+              "ObjectType": "Vector3",
+              "X": 0.40143367648124695,
+              "Y": 0.8612106442451477,
+              "Z": -0.31171655654907227
+             },
+             "WorldSecondaryAxis": {
+              "ObjectType": "Vector3",
+              "X": -0.03446602448821068,
+              "Y": -0.32589781284332275,
+              "Z": -0.9447765350341797
+             },
+             "Transform": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": 0,
+               "Y": 0,
+               "Z": 0
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": 0,
+               "Y": 0,
+               "Z": 0
+              }
+             },
+             "LuaChildren": [
+              {
+               "InstanceType": "Bone",
+               "ActorGuid": "ABAE56D34BA2B6EA8DC0C88F9C40D0E8",
+               "ObjectKey": 10282,
+               "Archivable": true,
+               "Name": "RightHand",
+               "bDisableAdaptiveNetUpdateFrequency": false,
+               "Mobility": "Movable",
+               "WorldTransform": {
+                "Translation": {
+                 "ObjectType": "Vector3",
+                 "X": -35.56532287597656,
+                 "Y": 11600.154296875,
+                 "Z": 4.333096027374268
+                },
+                "Rotation": {
+                 "ObjectType": "Vector3",
+                 "X": 59.526187896728516,
+                 "Y": -52.06170654296875,
+                 "Z": -56.59348678588867
+                },
+                "Scale": {
+                 "ObjectType": "Vector3",
+                 "X": 1,
+                 "Y": 1,
+                 "Z": 1
+                }
+               },
+               "CFrame": {
+                "ObjectType": "CFrame",
+                "Position": {
+                 "ObjectType": "Vector3",
+                 "X": -0.001041412353515625,
+                 "Y": -0.01956939697265625,
+                 "Z": 20.552799224853516
+                },
+                "Orientation": {
+                 "ObjectType": "Vector3",
+                 "X": -0.09169362485408783,
+                 "Y": 0.004808463156223297,
+                 "Z": 83.43020629882812
+                }
+               },
+               "WorldCFrame": {
+                "ObjectType": "CFrame",
+                "Position": {
+                 "ObjectType": "Vector3",
+                 "X": -35.56532287597656,
+                 "Y": 11600.154296875,
+                 "Z": 4.333096027374268
+                },
+                "Orientation": {
+                 "ObjectType": "Vector3",
+                 "X": 59.526187896728516,
+                 "Y": -52.06170654296875,
+                 "Z": -56.59348678588867
+                }
+               },
+               "Axis": {
+                "ObjectType": "Vector3",
+                "X": -8.392340532736853e-05,
+                "Y": -0.0016003549098968506,
+                "Z": -0.9999986886978149
+               },
+               "SecondaryAxis": {
+                "ObjectType": "Vector3",
+                "X": 0.114413321018219,
+                "Y": 0.9934319257736206,
+                "Z": -0.0015994476852938533
+               },
+               "WorldAxis": {
+                "ObjectType": "Vector3",
+                "X": 0.3999713659286499,
+                "Y": 0.8618610501289368,
+                "Z": -0.31179875135421753
+               },
+               "WorldSecondaryAxis": {
+                "ObjectType": "Vector3",
+                "X": 0.9059267044067383,
+                "Y": -0.4233567416667938,
+                "Z": -0.008114052005112171
+               },
+               "Transform": {
+                "ObjectType": "CFrame",
+                "Position": {
+                 "ObjectType": "Vector3",
+                 "X": 0,
+                 "Y": 0,
+                 "Z": 0
+                },
+                "Orientation": {
+                 "ObjectType": "Vector3",
+                 "X": 0,
+                 "Y": 0,
+                 "Z": 0
+                }
+               },
+               "LuaChildren": [
+                {
+                 "InstanceType": "Bone",
+                 "ActorGuid": "CD96C3FB465347B3A3E6ED88977CC79B",
+                 "ObjectKey": 10283,
+                 "Archivable": true,
+                 "Name": "RightItem",
+                 "bDisableAdaptiveNetUpdateFrequency": false,
+                 "Mobility": "Movable",
+                 "WorldTransform": {
+                  "Translation": {
+                   "ObjectType": "Vector3",
+                   "X": -33.767723083496094,
+                   "Y": 11588.666015625,
+                   "Z": 12.289793014526367
+                  },
+                  "Rotation": {
+                   "ObjectType": "Vector3",
+                   "X": -25.046701431274414,
+                   "Y": -89.4868392944336,
+                   "Z": -72.04898834228516
+                  },
+                  "Scale": {
+                   "ObjectType": "Vector3",
+                   "X": 1,
+                   "Y": 1,
+                   "Z": 1
+                  }
+                 },
+                 "CFrame": {
+                  "ObjectType": "CFrame",
+                  "Position": {
+                   "ObjectType": "Vector3",
+                   "X": 6.4277801513671875,
+                   "Y": 4.601711273193359,
+                   "Z": 11.663627624511719
+                  },
+                  "Orientation": {
+                   "ObjectType": "Vector3",
+                   "X": -8.537733720004326e-07,
+                   "Y": -90.00000762939453,
+                   "Z": -1.2806601262127515e-05
+                  }
+                 },
+                 "WorldCFrame": {
+                  "ObjectType": "CFrame",
+                  "Position": {
+                   "ObjectType": "Vector3",
+                   "X": -33.767723083496094,
+                   "Y": 11588.666015625,
+                   "Z": 12.289793014526367
+                  },
+                  "Orientation": {
+                   "ObjectType": "Vector3",
+                   "X": -25.046701431274414,
+                   "Y": -89.4868392944336,
+                   "Z": -72.04898834228516
+                  }
+                 },
+                 "Axis": {
+                  "ObjectType": "Vector3",
+                  "X": 1,
+                  "Y": -1.4901155864777138e-08,
+                  "Z": 1.0882212109208922e-07
+                 },
+                 "SecondaryAxis": {
+                  "ObjectType": "Vector3",
+                  "X": -1.0882212819751658e-07,
+                  "Y": -2.2351736106429598e-07,
+                  "Z": 1
+                 },
+                 "WorldAxis": {
+                  "ObjectType": "Vector3",
+                  "X": 0.9059266448020935,
+                  "Y": -0.4233568608760834,
+                  "Z": -0.008114048279821873
+                 },
+                 "WorldSecondaryAxis": {
+                  "ObjectType": "Vector3",
+                  "X": -0.39997148513793945,
+                  "Y": -0.8618610501289368,
+                  "Z": 0.3117985427379608
+                 },
+                 "Transform": {
+                  "ObjectType": "CFrame",
+                  "Position": {
+                   "ObjectType": "Vector3",
+                   "X": 0,
+                   "Y": 0,
+                   "Z": 0
+                  },
+                  "Orientation": {
+                   "ObjectType": "Vector3",
+                   "X": 0,
+                   "Y": 0,
+                   "Z": 0
+                  }
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "InstanceType": "Bone",
+           "ActorGuid": "5D2F1D2647A0CAB7DCCB29BC34FE9142",
+           "ObjectKey": 10284,
+           "Archivable": true,
+           "Name": "LeftUpperArm",
+           "bDisableAdaptiveNetUpdateFrequency": false,
+           "Mobility": "Movable",
+           "WorldTransform": {
+            "Translation": {
+             "ObjectType": "Vector3",
+             "X": 18.4730281829834,
+             "Y": 11636.8720703125,
+             "Z": -2.9411396980285645
+            },
+            "Rotation": {
+             "ObjectType": "Vector3",
+             "X": -64.95738983154297,
+             "Y": -95.35968017578125,
+             "Z": 4.428498268127441
+            },
+            "Scale": {
+             "ObjectType": "Vector3",
+             "X": 1,
+             "Y": 1,
+             "Z": 1
+            }
+           },
+           "CFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": -0.9012632369995117,
+             "Y": -18.472637176513672,
+             "Z": -20.99883270263672
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": -24.925933837890625,
+             "Y": 177.17259216308594,
+             "Z": 178.5240478515625
+            }
+           },
+           "WorldCFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 18.4730281829834,
+             "Y": 11636.8720703125,
+             "Z": -2.9411396980285645
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": -64.95738983154297,
+             "Y": -95.35968017578125,
+             "Z": 4.428497314453125
+            }
+           },
+           "Axis": {
+            "ObjectType": "Vector3",
+            "X": -0.044732898473739624,
+            "Y": -0.4214463233947754,
+            "Z": 0.9057493805885315
+           },
+           "SecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": 0.9979158043861389,
+            "Y": 0.023358197882771492,
+            "Z": 0.06015338376164436
+           },
+           "WorldAxis": {
+            "ObjectType": "Vector3",
+            "X": 0.42144152522087097,
+            "Y": -0.9059932231903076,
+            "Z": 0.03953874856233597
+           },
+           "WorldSecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": -0.023478487506508827,
+            "Y": 0.03268447145819664,
+            "Z": 0.9991899132728577
+           },
+           "Transform": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            }
+           },
+           "LuaChildren": [
+            {
+             "InstanceType": "Bone",
+             "ActorGuid": "AF6CE1B74782BF290D3525B790E3438F",
+             "ObjectKey": 10285,
+             "Archivable": true,
+             "Name": "LeftLowerArm",
+             "bDisableAdaptiveNetUpdateFrequency": false,
+             "Mobility": "Movable",
+             "WorldTransform": {
+              "Translation": {
+               "ObjectType": "Vector3",
+               "X": 27.296733856201172,
+               "Y": 11617.8466796875,
+               "Z": -2.07242488861084
+              },
+              "Rotation": {
+               "ObjectType": "Vector3",
+               "X": -59.45279312133789,
+               "Y": -127.8296127319336,
+               "Z": 39.884090423583984
+              },
+              "Scale": {
+               "ObjectType": "Vector3",
+               "X": 1,
+               "Y": 1,
+               "Z": 1
+              }
+             },
+             "CFrame": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": 0.0390162467956543,
+               "Y": -0.023502349853515625,
+               "Z": -20.98969268798828
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": 0.16054560244083405,
+               "Y": -15.895974159240723,
+               "Z": 6.511384963989258
+              }
+             },
+             "WorldCFrame": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": 27.296733856201172,
+               "Y": 11617.8466796875,
+               "Z": -2.07242488861084
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": -59.45278549194336,
+               "Y": -127.82960510253906,
+               "Z": 39.88407897949219
+              }
+             },
+             "Axis": {
+              "ObjectType": "Vector3",
+              "X": 0.27389055490493774,
+              "Y": 0.002802045550197363,
+              "Z": -0.9617567658424377
+             },
+             "SecondaryAxis": {
+              "ObjectType": "Vector3",
+              "X": 0.95546954870224,
+              "Y": 0.11340019106864929,
+              "Z": 0.2724304497241974
+             },
+             "WorldAxis": {
+              "ObjectType": "Vector3",
+              "X": 0.40143391489982605,
+              "Y": -0.8612105846405029,
+              "Z": 0.3117164075374603
+             },
+             "WorldSecondaryAxis": {
+              "ObjectType": "Vector3",
+              "X": -0.034443311393260956,
+              "Y": 0.3259073495864868,
+              "Z": 0.9447740912437439
+             },
+             "Transform": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": 0,
+               "Y": 0,
+               "Z": 0
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": 0,
+               "Y": 0,
+               "Z": 0
+              }
+             },
+             "LuaChildren": [
+              {
+               "InstanceType": "Bone",
+               "ActorGuid": "DBB34FFA472BC0F1B12C2F9B4811D224",
+               "ObjectKey": 10286,
+               "Archivable": true,
+               "Name": "LeftHand",
+               "bDisableAdaptiveNetUpdateFrequency": false,
+               "Mobility": "Movable",
+               "WorldTransform": {
+                "Translation": {
+                 "ObjectType": "Vector3",
+                 "X": 35.56523513793945,
+                 "Y": 11600.154296875,
+                 "Z": 4.3331098556518555
+                },
+                "Rotation": {
+                 "ObjectType": "Vector3",
+                 "X": -59.526187896728516,
+                 "Y": -127.93864440917969,
+                 "Z": 123.40662384033203
+                },
+                "Scale": {
+                 "ObjectType": "Vector3",
+                 "X": 1,
+                 "Y": 1,
+                 "Z": 1
+                }
+               },
+               "CFrame": {
+                "ObjectType": "CFrame",
+                "Position": {
+                 "ObjectType": "Vector3",
+                 "X": 0.000942230224609375,
+                 "Y": 0.019626617431640625,
+                 "Z": -20.552749633789062
+                },
+                "Orientation": {
+                 "ObjectType": "Vector3",
+                 "X": -0.09181314706802368,
+                 "Y": 0.004673562478274107,
+                 "Z": 83.42859649658203
+                }
+               },
+               "WorldCFrame": {
+                "ObjectType": "CFrame",
+                "Position": {
+                 "ObjectType": "Vector3",
+                 "X": 35.56522750854492,
+                 "Y": 11600.154296875,
+                 "Z": 4.3331074714660645
+                },
+                "Orientation": {
+                 "ObjectType": "Vector3",
+                 "X": -59.52619552612305,
+                 "Y": -127.93862915039062,
+                 "Z": 123.4066162109375
+                }
+               },
+               "Axis": {
+                "ObjectType": "Vector3",
+                "X": -8.156894909916446e-05,
+                "Y": -0.0016024409560486674,
+                "Z": -0.9999986886978149
+               },
+               "SecondaryAxis": {
+                "ObjectType": "Vector3",
+                "X": 0.11444123089313507,
+                "Y": 0.9934287071228027,
+                "Z": -0.0016012478154152632
+               },
+               "WorldAxis": {
+                "ObjectType": "Vector3",
+                "X": 0.3999694287776947,
+                "Y": -0.8618611097335815,
+                "Z": 0.311801016330719
+               },
+               "WorldSecondaryAxis": {
+                "ObjectType": "Vector3",
+                "X": 0.9059269428253174,
+                "Y": 0.42335614562034607,
+                "Z": 0.00811777450144291
+               },
+               "Transform": {
+                "ObjectType": "CFrame",
+                "Position": {
+                 "ObjectType": "Vector3",
+                 "X": 0,
+                 "Y": 0,
+                 "Z": 0
+                },
+                "Orientation": {
+                 "ObjectType": "Vector3",
+                 "X": 0,
+                 "Y": 0,
+                 "Z": 0
+                }
+               },
+               "LuaChildren": [
+                {
+                 "InstanceType": "Bone",
+                 "ActorGuid": "E4E6E9FE4FBCA7C79E9503BEC66C3250",
+                 "ObjectKey": 10287,
+                 "Archivable": true,
+                 "Name": "LeftItem",
+                 "bDisableAdaptiveNetUpdateFrequency": false,
+                 "Mobility": "Movable",
+                 "WorldTransform": {
+                  "Translation": {
+                   "ObjectType": "Vector3",
+                   "X": 33.76802062988281,
+                   "Y": 11588.666015625,
+                   "Z": 12.290018081665039
+                  },
+                  "Rotation": {
+                   "ObjectType": "Vector3",
+                   "X": 25.046667098999023,
+                   "Y": -90.51339721679688,
+                   "Z": -72.04894256591797
+                  },
+                  "Scale": {
+                   "ObjectType": "Vector3",
+                   "X": 1,
+                   "Y": 1,
+                   "Z": 1
+                  }
+                 },
+                 "CFrame": {
+                  "ObjectType": "CFrame",
+                  "Position": {
+                   "ObjectType": "Vector3",
+                   "X": -6.4272308349609375,
+                   "Y": -4.601957321166992,
+                   "Z": -11.66347885131836
+                  },
+                  "Orientation": {
+                   "ObjectType": "Vector3",
+                   "X": -4.2688714074756717e-07,
+                   "Y": -90.00000762939453,
+                   "Z": 179.99998474121094
+                  }
+                 },
+                 "WorldCFrame": {
+                  "ObjectType": "CFrame",
+                  "Position": {
+                   "ObjectType": "Vector3",
+                   "X": 33.76802062988281,
+                   "Y": 11588.666015625,
+                   "Z": 12.290018081665039
+                  },
+                  "Orientation": {
+                   "ObjectType": "Vector3",
+                   "X": 25.046667098999023,
+                   "Y": -90.51339721679688,
+                   "Z": -72.04894256591797
+                  }
+                 },
+                 "Axis": {
+                  "ObjectType": "Vector3",
+                  "X": 1,
+                  "Y": -7.450585925994346e-09,
+                  "Z": 1.0882212109208922e-07
+                 },
+                 "SecondaryAxis": {
+                  "ObjectType": "Vector3",
+                  "X": 1.0882212819751658e-07,
+                  "Y": 3.149879717057047e-07,
+                  "Z": -1
+                 },
+                 "WorldAxis": {
+                  "ObjectType": "Vector3",
+                  "X": 0.9059268832206726,
+                  "Y": 0.4233563244342804,
+                  "Z": 0.008117700926959515
+                 },
+                 "WorldSecondaryAxis": {
+                  "ObjectType": "Vector3",
+                  "X": 0.39996978640556335,
+                  "Y": -0.8618614077568054,
+                  "Z": 0.31179970502853394
+                 },
+                 "Transform": {
+                  "ObjectType": "CFrame",
+                  "Position": {
+                   "ObjectType": "Vector3",
+                   "X": 0,
+                   "Y": 0,
+                   "Z": 0
+                  },
+                  "Orientation": {
+                   "ObjectType": "Vector3",
+                   "X": 0,
+                   "Y": 0,
+                   "Z": 0
+                  }
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "InstanceType": "Bone",
+           "ActorGuid": "DE769F2749900C2817ED60B7AD5E15E9",
+           "ObjectKey": 10288,
+           "Archivable": true,
+           "Name": "Head",
+           "bDisableAdaptiveNetUpdateFrequency": false,
+           "Mobility": "Movable",
+           "WorldTransform": {
+            "Translation": {
+             "ObjectType": "Vector3",
+             "X": 0.00043474850826896727,
+             "Y": 11650.826171875,
+             "Z": -1.8999593257904053
+            },
+            "Rotation": {
+             "ObjectType": "Vector3",
+             "X": 83.98887634277344,
+             "Y": -179.9973602294922,
+             "Z": -90.00010681152344
+            },
+            "Scale": {
+             "ObjectType": "Vector3",
+             "X": 1,
+             "Y": 1,
+             "Z": 1
+            }
+           },
+           "CFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 1.4322166442871094,
+             "Y": -0.00016778180724941194,
+             "Z": -34.7962646484375
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": -0.0009956875583156943,
+             "Y": -11.334211349487305,
+             "Z": -0.009589362889528275
+            }
+           },
+           "WorldCFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 0.00043474850826896727,
+             "Y": 11650.826171875,
+             "Z": -1.8999593257904053
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": 83.98887634277344,
+             "Y": -179.9973602294922,
+             "Z": -90.00010681152344
+            }
+           },
+           "Axis": {
+            "ObjectType": "Vector3",
+            "X": 0.19653163850307465,
+            "Y": -1.7378026313963346e-05,
+            "Z": -0.9804974794387817
+           },
+           "SecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": 0.9804974794387817,
+            "Y": -0.0001673659571679309,
+            "Z": 0.19653163850307465
+           },
+           "WorldAxis": {
+            "ObjectType": "Vector3",
+            "X": 4.826972599403234e-06,
+            "Y": 0.9945015907287598,
+            "Z": 0.10472159832715988
+           },
+           "WorldSecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": 4.760577212437056e-05,
+            "Y": -0.10472159832715988,
+            "Z": 0.9945015907287598
+           },
+           "Transform": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            }
+           },
+           "LuaChildren": [
+            {
+             "InstanceType": "Bone",
+             "ActorGuid": "8AF0A0FB402E15959CD62D9D9E836279",
+             "ObjectKey": 10289,
+             "Archivable": true,
+             "Name": "FirstPersonCamera",
+             "bDisableAdaptiveNetUpdateFrequency": false,
+             "Mobility": "Movable",
+             "WorldTransform": {
+              "Translation": {
+               "ObjectType": "Vector3",
+               "X": 0.0006645041867159307,
+               "Y": 11667.537109375,
+               "Z": 19.95313835144043
+              },
+              "Rotation": {
+               "ObjectType": "Vector3",
+               "X": 84.42659759521484,
+               "Y": -180,
+               "Z": -89.9999771118164
+              },
+              "Scale": {
+               "ObjectType": "Vector3",
+               "X": 1,
+               "Y": 1,
+               "Z": 1
+              }
+             },
+             "CFrame": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": 19.982952117919922,
+               "Y": 0.0008130090427584946,
+               "Z": -18.90747833251953
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": 0.0002553342201281339,
+               "Y": 0.437727153301239,
+               "Z": 0.0027526821941137314
+              }
+             },
+             "WorldCFrame": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": 0.0006645041867159307,
+               "Y": 11667.537109375,
+               "Z": 19.95313835144043
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": 84.42659759521484,
+               "Y": -180,
+               "Z": -89.9999771118164
+              }
+             },
+             "Axis": {
+              "ObjectType": "Vector3",
+              "X": -0.007639705669134855,
+              "Y": 4.456422630028101e-06,
+              "Z": -0.9999707937240601
+             },
+             "SecondaryAxis": {
+              "ObjectType": "Vector3",
+              "X": 0.9999707937240601,
+              "Y": 4.804336640518159e-05,
+              "Z": -0.007639705203473568
+             },
+             "WorldAxis": {
+              "ObjectType": "Vector3",
+              "X": 6.436642330243103e-09,
+              "Y": 0.9952725768089294,
+              "Z": 0.09712084382772446
+             },
+             "WorldSecondaryAxis": {
+              "ObjectType": "Vector3",
+              "X": -4.021276254206896e-07,
+              "Y": -0.09712084382772446,
+              "Z": 0.9952725768089294
+             },
+             "Transform": {
+              "ObjectType": "CFrame",
+              "Position": {
+               "ObjectType": "Vector3",
+               "X": 0,
+               "Y": 0,
+               "Z": 0
+              },
+              "Orientation": {
+               "ObjectType": "Vector3",
+               "X": 0,
+               "Y": 0,
+               "Z": 0
+              }
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "InstanceType": "Bone",
+       "ActorGuid": "8A2E928E45E94D303E35C090B990AEEE",
+       "ObjectKey": 10290,
+       "Archivable": true,
+       "Name": "LeftUpperLeg",
+       "bDisableAdaptiveNetUpdateFrequency": false,
+       "Mobility": "Movable",
+       "WorldTransform": {
+        "Translation": {
+         "ObjectType": "Vector3",
+         "X": 8.291415214538574,
+         "Y": 11593.9208984375,
+         "Z": -1.5392215573228896e-05
+        },
+        "Rotation": {
+         "ObjectType": "Vector3",
+         "X": 87.49634552001953,
+         "Y": 63.3144645690918,
+         "Z": 153.30494689941406
+        },
+        "Scale": {
+         "ObjectType": "Vector3",
+         "X": 1,
+         "Y": 1,
+         "Z": 1
+        }
+       },
+       "CFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": -5.3529482102021575e-05,
+         "Y": -8.291415214538574,
+         "Z": -6.866455078125e-05
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 2.2371387481689453,
+         "Y": 1.1249372959136963,
+         "Z": 0.012190494686365128
+        }
+       },
+       "WorldCFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 8.291415214538574,
+         "Y": 11593.9208984375,
+         "Z": -1.5392215573228896e-05
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 87.49634552001953,
+         "Y": 63.3144645690918,
+         "Z": 153.30494689941406
+        }
+       },
+       "Axis": {
+        "ObjectType": "Vector3",
+        "X": -0.019617633894085884,
+        "Y": 0.03903551772236824,
+        "Z": -0.9990452527999878
+       },
+       "SecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": 0.9998074173927307,
+        "Y": 0.000212602099054493,
+        "Z": -0.019624292850494385
+       },
+       "WorldAxis": {
+        "ObjectType": "Vector3",
+        "X": -0.03903023526072502,
+        "Y": 0.9990454316139221,
+        "Z": -0.019617818295955658
+       },
+       "WorldSecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": -0.000217062231968157,
+        "Y": 0.01962430216372013,
+        "Z": 0.9998074173927307
+       },
+       "Transform": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        }
+       },
+       "LuaChildren": [
+        {
+         "InstanceType": "Bone",
+         "ActorGuid": "30A8D12D4D4333998A5C64869DCFCA3D",
+         "ObjectKey": 10291,
+         "Archivable": true,
+         "Name": "LeftLowerLeg",
+         "bDisableAdaptiveNetUpdateFrequency": false,
+         "Mobility": "Movable",
+         "WorldTransform": {
+          "Translation": {
+           "ObjectType": "Vector3",
+           "X": 9.371942520141602,
+           "Y": 11566.263671875,
+           "Z": 0.5431086421012878
+          },
+          "Rotation": {
+           "ObjectType": "Vector3",
+           "X": 84.0575942993164,
+           "Y": 157.99322509765625,
+           "Z": -112.1458511352539
+          },
+          "Scale": {
+           "ObjectType": "Vector3",
+           "X": 1,
+           "Y": 1,
+           "Z": 1
+          }
+         },
+         "CFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 2.956390380859375e-05,
+           "Y": -2.47955322265625e-05,
+           "Z": 27.68374252319336
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": -1.152594450104516e-05,
+           "Y": -6.63214111328125,
+           "Z": -5.015920578443911e-06
+          }
+         },
+         "WorldCFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 9.371942520141602,
+           "Y": 11566.263671875,
+           "Z": 0.5431086421012878
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 84.0575942993164,
+           "Y": 157.99322509765625,
+           "Z": -112.1458511352539
+          }
+         },
+         "Axis": {
+          "ObjectType": "Vector3",
+          "X": 0.11549437791109085,
+          "Y": -2.0116567611694336e-07,
+          "Z": -0.9933081269264221
+         },
+         "SecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.9933081269264221,
+          "Y": -8.754432911928234e-08,
+          "Z": 0.11549437791109085
+         },
+         "WorldAxis": {
+          "ObjectType": "Vector3",
+          "X": -0.03879391774535179,
+          "Y": 0.9946264624595642,
+          "Z": 0.09598561376333237
+         },
+         "WorldSecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.004292214289307594,
+          "Y": -0.09589117020368576,
+          "Z": 0.99538254737854
+         },
+         "Transform": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          }
+         },
+         "LuaChildren": [
+          {
+           "InstanceType": "Bone",
+           "ActorGuid": "490B7018422B3DDF8DC3E7851564EAF8",
+           "ObjectKey": 10292,
+           "Archivable": true,
+           "Name": "LeftFoot",
+           "bDisableAdaptiveNetUpdateFrequency": false,
+           "Mobility": "Movable",
+           "WorldTransform": {
+            "Translation": {
+             "ObjectType": "Vector3",
+             "X": 10.304290771484375,
+             "Y": 11542.3603515625,
+             "Z": -1.7637557983398438
+            },
+            "Rotation": {
+             "ObjectType": "Vector3",
+             "X": 82.99994659423828,
+             "Y": -179.99978637695312,
+             "Z": -90.0000991821289
+            },
+            "Scale": {
+             "ObjectType": "Vector3",
+             "X": 1,
+             "Y": 1,
+             "Z": 1
+            }
+           },
+           "CFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": -1.7642974853515625e-05,
+             "Y": -3.814697265625e-06,
+             "Z": 24.03325843811035
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": -2.21614670753479,
+             "Y": -1.4984984397888184,
+             "Z": 0.30365076661109924
+            }
+           },
+           "WorldCFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 10.304290771484375,
+             "Y": 11542.3603515625,
+             "Z": -1.7637557983398438
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": 82.99994659423828,
+             "Y": -179.99978637695312,
+             "Z": -90.0000991821289
+            }
+           },
+           "Axis": {
+            "ObjectType": "Vector3",
+            "X": 0.026131190359592438,
+            "Y": -0.0386694110929966,
+            "Z": -0.9989103078842163
+           },
+           "SecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": 0.9996493458747864,
+            "Y": 0.005295716691762209,
+            "Z": 0.025945516303181648
+           },
+           "WorldAxis": {
+            "ObjectType": "Vector3",
+            "X": 4.7218517806868476e-07,
+            "Y": 0.992546021938324,
+            "Z": 0.12187031656503677
+           },
+           "WorldSecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": 5.558379598369356e-06,
+            "Y": -0.12187031656503677,
+            "Z": 0.992546021938324
+           },
+           "Transform": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            }
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "InstanceType": "Bone",
+       "ActorGuid": "57EC77BE41ACF0243EDB6FAC7FDEFA0D",
+       "ObjectKey": 10293,
+       "Archivable": true,
+       "Name": "RightUpperLeg",
+       "bDisableAdaptiveNetUpdateFrequency": false,
+       "Mobility": "Movable",
+       "WorldTransform": {
+        "Translation": {
+         "ObjectType": "Vector3",
+         "X": -8.291425704956055,
+         "Y": 11593.9208984375,
+         "Z": 1.5646190149709582e-05
+        },
+        "Rotation": {
+         "ObjectType": "Vector3",
+         "X": -87.49632263183594,
+         "Y": 116.68488311767578,
+         "Z": -26.694469451904297
+        },
+        "Scale": {
+         "ObjectType": "Vector3",
+         "X": 1,
+         "Y": 1,
+         "Z": 1
+        }
+       },
+       "CFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 5.3518924687523395e-05,
+         "Y": 8.291425704956055,
+         "Z": 5.340576171875e-05
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 2.2365617752075195,
+         "Y": -178.87506103515625,
+         "Z": 0.012632139958441257
+        }
+       },
+       "WorldCFrame": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": -8.291425704956055,
+         "Y": 11593.9208984375,
+         "Z": 1.5646190149709582e-05
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": -87.49632263183594,
+         "Y": 116.68488311767578,
+         "Z": -26.694469451904297
+        }
+       },
+       "Axis": {
+        "ObjectType": "Vector3",
+        "X": 0.01961771957576275,
+        "Y": 0.039025451987981796,
+        "Z": 0.9990456104278564
+       },
+       "SecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": -0.9998074173927307,
+        "Y": 0.00022030541731510311,
+        "Z": 0.019624073058366776
+       },
+       "WorldAxis": {
+        "ObjectType": "Vector3",
+        "X": -0.039030756801366806,
+        "Y": -0.9990454316139221,
+        "Z": 0.01961752213537693
+       },
+       "WorldSecondaryAxis": {
+        "ObjectType": "Vector3",
+        "X": -0.00021582764748018235,
+        "Y": -0.019624052569270134,
+        "Z": -0.9998074173927307
+       },
+       "Transform": {
+        "ObjectType": "CFrame",
+        "Position": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        },
+        "Orientation": {
+         "ObjectType": "Vector3",
+         "X": 0,
+         "Y": 0,
+         "Z": 0
+        }
+       },
+       "LuaChildren": [
+        {
+         "InstanceType": "Bone",
+         "ActorGuid": "0AC5F2DF4F994B2934412B845FAF68FC",
+         "ObjectKey": 10294,
+         "Archivable": true,
+         "Name": "RightLowerLeg",
+         "bDisableAdaptiveNetUpdateFrequency": false,
+         "Mobility": "Movable",
+         "WorldTransform": {
+          "Translation": {
+           "ObjectType": "Vector3",
+           "X": -9.37194538116455,
+           "Y": 11566.263671875,
+           "Z": 0.5430219769477844
+          },
+          "Rotation": {
+           "ObjectType": "Vector3",
+           "X": -84.0573501586914,
+           "Y": 22.006458282470703,
+           "Z": 67.85447692871094
+          },
+          "Scale": {
+           "ObjectType": "Vector3",
+           "X": 1,
+           "Y": 1,
+           "Z": 1
+          }
+         },
+         "CFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 7.987022399902344e-05,
+           "Y": 2.86102294921875e-06,
+           "Z": -27.683738708496094
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 2.7534204491530545e-05,
+           "Y": -6.632360935211182,
+           "Z": 7.86005548434332e-05
+          }
+         },
+         "WorldCFrame": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": -9.37194538116455,
+           "Y": 11566.263671875,
+           "Z": 0.5430219769477844
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": -84.0573501586914,
+           "Y": 22.00645637512207,
+           "Z": 67.85448455810547
+          }
+         },
+         "Axis": {
+          "ObjectType": "Vector3",
+          "X": 0.11549819260835648,
+          "Y": 4.805625053450058e-07,
+          "Z": -0.9933077096939087
+         },
+         "SecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.9933077096939087,
+          "Y": 1.371838493469113e-06,
+          "Z": 0.11549819260835648
+         },
+         "WorldAxis": {
+          "ObjectType": "Vector3",
+          "X": -0.038794949650764465,
+          "Y": -0.9946260452270508,
+          "Z": -0.09598972648382187
+         },
+         "WorldSecondaryAxis": {
+          "ObjectType": "Vector3",
+          "X": 0.004292239900678396,
+          "Y": 0.09589529037475586,
+          "Z": -0.9953821897506714
+         },
+         "Transform": {
+          "ObjectType": "CFrame",
+          "Position": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          },
+          "Orientation": {
+           "ObjectType": "Vector3",
+           "X": 0,
+           "Y": 0,
+           "Z": 0
+          }
+         },
+         "LuaChildren": [
+          {
+           "InstanceType": "Bone",
+           "ActorGuid": "AFD367694B9CAF25916E4394015CFFF2",
+           "ObjectKey": 10295,
+           "Archivable": true,
+           "Name": "RightFoot",
+           "bDisableAdaptiveNetUpdateFrequency": false,
+           "Mobility": "Movable",
+           "WorldTransform": {
+            "Translation": {
+             "ObjectType": "Vector3",
+             "X": -10.304320335388184,
+             "Y": 11542.3603515625,
+             "Z": -1.763882040977478
+            },
+            "Rotation": {
+             "ObjectType": "Vector3",
+             "X": -82.99993896484375,
+             "Y": 9.015027899295092e-05,
+             "Z": 89.99956512451172
+            },
+            "Scale": {
+             "ObjectType": "Vector3",
+             "X": 1,
+             "Y": 1,
+             "Z": 1
+            }
+           },
+           "CFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": -3.981590270996094e-05,
+             "Y": 6.67572021484375e-06,
+             "Z": -24.033241271972656
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": -2.2161693572998047,
+             "Y": -1.4982627630233765,
+             "Z": 0.3036159574985504
+            }
+           },
+           "WorldCFrame": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": -10.304320335388184,
+             "Y": 11542.3603515625,
+             "Z": -1.763882040977478
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": -82.99994659423828,
+             "Y": 9.01699677342549e-05,
+             "Z": 89.99956512451172
+            }
+           },
+           "Axis": {
+            "ObjectType": "Vector3",
+            "X": 0.026127081364393234,
+            "Y": -0.038669805973768234,
+            "Z": -0.9989104270935059
+           },
+           "SecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": 0.9996494650840759,
+            "Y": 0.005295109935104847,
+            "Z": 0.025941425934433937
+           },
+           "WorldAxis": {
+            "ObjectType": "Vector3",
+            "X": -1.91794995885175e-07,
+            "Y": -0.992546021938324,
+            "Z": -0.12187033146619797
+           },
+           "WorldSecondaryAxis": {
+            "ObjectType": "Vector3",
+            "X": 6.058739927539136e-06,
+            "Y": 0.12187033146619797,
+            "Z": -0.992546021938324
+           },
+           "Transform": {
+            "ObjectType": "CFrame",
+            "Position": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            },
+            "Orientation": {
+             "ObjectType": "Vector3",
+             "X": 0,
+             "Y": 0,
+             "Z": 0
+            }
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

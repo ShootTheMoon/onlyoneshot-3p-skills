@@ -1,0 +1,7 @@
+[{"name":"overdare_input_inject","arguments":{"events":[
+ {"type":"pointerMove","position":{"x":0.26,"y":0.868}},{"type":"wait","durationMs":150},
+ {"type":"pointerButton","button":"left","action":"down","position":{"x":0.26,"y":0.868}},
+ {"type":"wait","durationMs":90},
+ {"type":"pointerButton","button":"left","action":"up","position":{"x":0.26,"y":0.868}},
+ {"type":"wait","durationMs":600}]}},
+{"name":"overdare_observe","arguments":{"instances":{"namePattern":"Seungpyo1007"},"fields":["Name","ClassName","Transparency","CFrame","Size"]},"output":"C:/Users/29/Desktop/3y/GameIntegration/dump.json"}]

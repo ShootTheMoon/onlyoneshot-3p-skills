@@ -1,0 +1,8 @@
+[{"name":"overdare_input_inject","arguments":{"events":[
+ {"type":"pointerMove","target":"InfoButton"},
+ {"type":"pointerButton","button":"left","action":"down","target":"InfoButton"},
+ {"type":"wait","durationMs":80},
+ {"type":"pointerButton","button":"left","action":"up","target":"InfoButton"},
+ {"type":"wait","durationMs":1200}
+]}},
+{"name":"overdare_screenshot","arguments":{"includeGui":true},"output":"C:/Users/29/Desktop/3y/GameIntegration/screen.json"}]
