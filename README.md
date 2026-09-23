@@ -1,4 +1,4 @@
-﻿# ONLY ONE SHOT — 3P Skills
+# ONLY ONE SHOT — 3P Skills
 
 Third-person combat animations and the lobby skill-preview stage for [ONLY ONE SHOT](https://github.com/ShootTheMoon/onlyoneshot) (OVERDARE).
 
